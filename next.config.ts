@@ -1,5 +1,4 @@
 import type { NextConfig } from "next";
-import { withContentlayer } from "next-contentlayer";
 
 const nextConfig: NextConfig = {
   // SEO and Performance Optimizations
@@ -43,4 +42,4 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default withContentlayer(nextConfig);
+export default nextConfig;
