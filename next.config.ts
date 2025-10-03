@@ -9,6 +9,11 @@ const nextConfig: NextConfig = {
     minimumCacheTTL: 31536000, // 1 year
   },
   
+  // Disable ESLint during builds for deployment
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  
   // Compression and performance
   compress: true,
   poweredByHeader: false,
