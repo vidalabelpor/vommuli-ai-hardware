@@ -18,341 +18,444 @@ export const metadata: Metadata = generateSEO({
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-white">
-      {/* Authority-Building Hero */}
-      <header className="bg-gradient-to-r from-gray-900 to-blue-900 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <div className="mb-6 p-3 bg-green-600 rounded-lg inline-block">
-              <span className="text-white font-semibold">🏆 The World's Only Commission-Based AI Hardware Procurement Specialists</span>
-            </div>
-            
-            <h1 className="text-5xl sm:text-6xl font-bold mb-8">
-              25+ Years. 47 Countries. $2.4B+ Sourced.
-              <span className="block text-blue-300 text-4xl sm:text-5xl mt-4">
-                Zero Upfront Risk for Enterprise AI Hardware
-              </span>
-            </h1>
-            
-            <p className="text-xl text-gray-200 max-w-5xl mx-auto mb-8">
-              Meet the team behind the world's most comprehensive commission-based GPU procurement network. From Fortune 500 data centers to AI startup emergency sourcing, our quarter-century of global relationships delivers when traditional channels fail.
-            </p>
-            
-            {/* Trust Proof Bar */}
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8 max-w-4xl mx-auto">
-              <div className="bg-blue-800/50 p-4 rounded-lg">
-                <div className="text-3xl font-bold text-green-400 mb-1">850+</div>
-                <div className="text-sm text-blue-200">Successful Enterprise Projects</div>
-              </div>
-              <div className="bg-blue-800/50 p-4 rounded-lg">
-                <div className="text-3xl font-bold text-yellow-400 mb-1">$50M+</div>
-                <div className="text-sm text-blue-200">Professional Liability Coverage</div>
-              </div>
-              <div className="bg-blue-800/50 p-4 rounded-lg">
-                <div className="text-3xl font-bold text-purple-400 mb-1">95%</div>
-                <div className="text-sm text-blue-200">Transaction Success Rate</div>
-              </div>
-              <div className="bg-blue-800/50 p-4 rounded-lg">
-                <div className="text-3xl font-bold text-red-400 mb-1">24/7</div>
-                <div className="text-sm text-blue-200">Emergency Procurement Line</div>
-              </div>
-            </div>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors">
-                🚨 Schedule Emergency Consultation
-              </Link>
-              <Link href="/tools/commission-calculator" className="border-2 border-blue-300 text-blue-300 hover:bg-blue-300 hover:text-blue-900 font-bold py-4 px-8 rounded-lg text-lg transition-colors">
-                💰 Calculate Your Commission Savings
-              </Link>
+    <div className="min-h-screen bg-black text-white">
+      {/* Authority-Building Hero with Visual Impact */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Animated Background Grid */}
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-900">
+          <div className="absolute inset-0 opacity-20">
+            <div className="grid grid-cols-8 md:grid-cols-12 lg:grid-cols-16 h-full w-full">
+              {Array.from({ length: 192 }).map((_, i) => (
+                <div 
+                  key={i} 
+                  className="border border-green-500/20 relative group"
+                  style={{
+                    animationDelay: `${Math.random() * 2}s`,
+                    animation: `pulse ${3 + Math.random() * 2}s ease-in-out infinite`
+                  }}
+                >
+                  {Math.random() > 0.95 && (
+                    <div className="absolute inset-0 bg-gradient-to-br from-green-400/20 to-emerald-500/20 animate-pulse"></div>
+                  )}
+                </div>
+              ))}
             </div>
           </div>
         </div>
-      </header>
 
-      {/* Founder & Team Authority */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              The Team Behind $2.4B+ in Global Hardware Sourcing
+        {/* Floating Elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-gradient-to-br from-green-500/10 to-emerald-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute top-3/4 right-1/4 w-96 h-96 bg-gradient-to-br from-emerald-500/10 to-cyan-500/10 rounded-full blur-3xl animate-pulse" style={{animationDelay: '1s'}}></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-br from-green-500/5 to-emerald-500/5 rounded-full blur-3xl animate-pulse" style={{animationDelay: '2s'}}></div>
+        </div>
+
+        <div className="relative z-10 max-w-8xl mx-auto px-6 lg:px-12 text-center pt-20">
+          {/* Status Indicator */}
+          <div className="inline-flex items-center gap-3 bg-green-500/10 border border-green-500/20 backdrop-blur-xl px-6 py-3 rounded-full mb-12">
+            <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+            <span className="text-green-300 font-medium text-sm tracking-wide">🏆 THE WORLD'S ONLY COMMISSION-BASED AI HARDWARE SPECIALISTS</span>
+          </div>
+
+          {/* Main Headline with Ultra-Impact Typography */}
+          <h1 className="relative mb-12" style={{textShadow: '0 8px 32px rgba(0,0,0,0.5)'}}>
+            <span className="block text-6xl md:text-7xl lg:text-8xl font-black leading-[0.85] tracking-tight mb-8">
+              <span 
+                className="bg-gradient-to-r from-white via-blue-50 to-gray-100 bg-clip-text text-transparent block transform hover:scale-105 transition-transform duration-700"
+                style={{
+                  background: 'linear-gradient(90deg, #ffffff 0%, #f0f9ff 30%, #f1f5f9 70%, #ffffff 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text'
+                }}
+              >
+                25+ Years
+              </span>
+              <span 
+                className="bg-gradient-to-r from-green-400 via-emerald-400 to-green-500 bg-clip-text text-transparent block relative transform hover:scale-105 transition-transform duration-700"
+                style={{
+                  background: 'linear-gradient(90deg, #4ade80 0%, #10b981 50%, #059669 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text'
+                }}
+              >
+                47 Countries
+                <div className="absolute -top-6 -right-12 w-32 h-32 bg-gradient-to-br from-green-400/30 to-emerald-500/30 rounded-full blur-3xl animate-pulse"></div>
+              </span>
+              <span 
+                className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-500 bg-clip-text text-transparent block transform hover:scale-105 transition-transform duration-700"
+                style={{
+                  background: 'linear-gradient(90deg, #22d3ee 0%, #60a5fa 50%, #a855f7 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text'
+                }}
+              >
+                $2.4B+ Sourced
+              </span>
+            </span>
+            <p className="text-2xl md:text-3xl lg:text-4xl text-emerald-400 font-semibold mt-6">
+              Zero Upfront Risk for Enterprise AI Hardware
+            </p>
+          </h1>
+            
+          {/* Compelling Subheadline */}
+          <p className="text-xl md:text-2xl text-gray-300 mb-16 max-w-5xl mx-auto leading-relaxed">
+            Meet the team behind the world's most comprehensive commission-based GPU procurement network. 
+            <br className="hidden md:block" />
+            From <span className="text-green-400 font-semibold">Fortune 500 data centers</span> to <span className="text-emerald-400 font-semibold">AI startup emergency sourcing</span>, 
+            our quarter-century of global relationships delivers when traditional channels fail.
+          </p>
+            
+          {/* Trust Metrics with Ultra-Premium Visual Impact */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto mb-16">
+            <div className="group relative text-center p-8 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-2xl border border-white/20 rounded-3xl hover:bg-white/15 transform hover:scale-105 hover:-translate-y-2 transition-all duration-500 overflow-hidden">
+              <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-green-400/30 to-emerald-500/30 rounded-full blur-2xl group-hover:w-32 group-hover:h-32 transition-all duration-500"></div>
+              <div className="relative z-10">
+                <div 
+                  className="text-4xl md:text-5xl font-black bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent mb-3 group-hover:scale-110 transition-transform duration-500"
+                  style={{
+                    background: 'linear-gradient(135deg, #4ade80 0%, #10b981 100%)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    textShadow: '0 4px 20px rgba(16, 185, 129, 0.3)'
+                  }}
+                >
+                  850+
+                </div>
+                <div className="text-gray-300 font-semibold tracking-wide group-hover:text-white transition-colors duration-300 text-sm">Enterprise Projects</div>
+                <div className="mt-4 h-1.5 w-12 mx-auto bg-gradient-to-r from-green-400 to-emerald-500 rounded-full group-hover:w-16 group-hover:h-2 transition-all duration-500 shadow-lg shadow-green-500/50"></div>
+              </div>
+            </div>
+            
+            <div className="group relative text-center p-8 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-2xl border border-white/20 rounded-3xl hover:bg-white/15 transform hover:scale-105 hover:-translate-y-2 transition-all duration-500 overflow-hidden">
+              <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-yellow-400/30 to-orange-500/30 rounded-full blur-2xl group-hover:w-32 group-hover:h-32 transition-all duration-500"></div>
+              <div className="relative z-10">
+                <div 
+                  className="text-4xl md:text-5xl font-black bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent mb-3 group-hover:scale-110 transition-transform duration-500"
+                  style={{
+                    background: 'linear-gradient(135deg, #fbbf24 0%, #f97316 100%)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    textShadow: '0 4px 20px rgba(251, 191, 36, 0.3)'
+                  }}
+                >
+                  $50M+
+                </div>
+                <div className="text-gray-300 font-semibold tracking-wide group-hover:text-white transition-colors duration-300 text-sm">Liability Coverage</div>
+                <div className="mt-4 h-1.5 w-12 mx-auto bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full group-hover:w-16 group-hover:h-2 transition-all duration-500 shadow-lg shadow-yellow-500/50"></div>
+              </div>
+            </div>
+            
+            <div className="group relative text-center p-8 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-2xl border border-white/20 rounded-3xl hover:bg-white/15 transform hover:scale-105 hover:-translate-y-2 transition-all duration-500 overflow-hidden">
+              <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-purple-400/30 to-pink-500/30 rounded-full blur-2xl group-hover:w-32 group-hover:h-32 transition-all duration-500"></div>
+              <div className="relative z-10">
+                <div 
+                  className="text-4xl md:text-5xl font-black bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent mb-3 group-hover:scale-110 transition-transform duration-500"
+                  style={{
+                    background: 'linear-gradient(135deg, #a855f7 0%, #ec4899 100%)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    textShadow: '0 4px 20px rgba(168, 85, 247, 0.3)'
+                  }}
+                >
+                  95%
+                </div>
+                <div className="text-gray-300 font-semibold tracking-wide group-hover:text-white transition-colors duration-300 text-sm">Success Rate</div>
+                <div className="mt-4 h-1.5 w-12 mx-auto bg-gradient-to-r from-purple-400 to-pink-500 rounded-full group-hover:w-16 group-hover:h-2 transition-all duration-500 shadow-lg shadow-purple-500/50"></div>
+              </div>
+            </div>
+            
+            <div className="group relative text-center p-8 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-2xl border border-white/20 rounded-3xl hover:bg-white/15 transform hover:scale-105 hover:-translate-y-2 transition-all duration-500 overflow-hidden">
+              <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-red-400/30 to-rose-500/30 rounded-full blur-2xl group-hover:w-32 group-hover:h-32 transition-all duration-500"></div>
+              <div className="relative z-10">
+                <div 
+                  className="text-4xl md:text-5xl font-black bg-gradient-to-r from-red-400 to-rose-500 bg-clip-text text-transparent mb-3 group-hover:scale-110 transition-transform duration-500"
+                  style={{
+                    background: 'linear-gradient(135deg, #f87171 0%, #f43f5e 100%)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    textShadow: '0 4px 20px rgba(248, 113, 113, 0.3)'
+                  }}
+                >
+                  24/7
+                </div>
+                <div className="text-gray-300 font-semibold tracking-wide group-hover:text-white transition-colors duration-300 text-sm">Emergency Line</div>
+                <div className="mt-4 h-1.5 w-12 mx-auto bg-gradient-to-r from-red-400 to-rose-500 rounded-full group-hover:w-16 group-hover:h-2 transition-all duration-500 shadow-lg shadow-red-500/50"></div>
+              </div>
+            </div>
+          </div>
+            
+          {/* CTA Buttons with Ultra-Premium Styling */}
+          <div className="flex flex-col sm:flex-row gap-8 justify-center">
+            <Link href="/contact" className="group relative transform hover:scale-110 transition-all duration-500">
+              <div className="absolute -inset-2 bg-gradient-to-r from-red-400 via-red-500 to-red-600 rounded-3xl blur-lg opacity-60 group-hover:opacity-100 group-hover:blur-xl transition-all duration-500"></div>
+              <div 
+                className="relative bg-gradient-to-r from-red-500 to-red-600 px-12 py-6 rounded-3xl font-black text-xl text-white shadow-2xl"
+                style={{
+                  background: 'linear-gradient(135deg, #ef4444 0%, #dc2626 50%, #b91c1c 100%)',
+                  boxShadow: '0 20px 40px rgba(239, 68, 68, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.1) inset'
+                }}
+              >
+                <span className="relative z-10 flex items-center gap-3">
+                  🚨 Emergency Consultation
+                  <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+                </span>
+                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-white/20 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute -top-1 -left-1 w-4 h-4 bg-red-300 rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping transition-opacity duration-300"></div>
+              </div>
+            </Link>
+            
+            <Link href="/tools/commission-calculator" className="group relative transform hover:scale-110 transition-all duration-500">
+              <div className="absolute -inset-1 bg-gradient-to-r from-green-500/50 to-emerald-500/50 rounded-3xl blur opacity-0 group-hover:opacity-100 group-hover:blur-lg transition-all duration-500"></div>
+              <div 
+                className="relative px-12 py-6 border-2 border-green-500/60 bg-gradient-to-br from-green-500/10 to-emerald-500/10 backdrop-blur-xl text-green-300 font-black text-xl rounded-3xl"
+                style={{
+                  backdropFilter: 'blur(20px)',
+                  border: '2px solid rgba(16, 185, 129, 0.3)',
+                  background: 'linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(5, 150, 105, 0.1) 100%)'
+                }}
+              >
+                <span className="relative z-10 flex items-center gap-3 group-hover:text-green-200 transition-colors duration-300">
+                  💰 Calculate Savings
+                  <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </span>
+                <div className="absolute inset-0 bg-gradient-to-r from-green-400/20 to-emerald-400/20 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </div>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Founder & Team Authority with Premium Design */}
+      <section className="py-32 bg-gradient-to-br from-gray-900 via-black to-gray-800 relative">
+        <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 to-emerald-500/5"></div>
+        
+        <div className="relative max-w-8xl mx-auto px-6 lg:px-12">
+          <div className="text-center mb-20">
+            <div className="inline-flex items-center gap-2 bg-green-500/10 border border-green-500/20 px-4 py-2 rounded-full mb-8">
+              <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+              <span className="text-green-300 font-medium text-sm">LEADERSHIP TEAM</span>
+            </div>
+            <h2 className="text-5xl md:text-6xl font-black text-white mb-8 leading-tight">
+              The Team Behind <span className="bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">$2.4B+</span>
+              <br />in Global Hardware Sourcing
             </h2>
-            <p className="text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto">
-              Meet the procurement specialists who've spent quarter-centuries building the relationships, expertise, and methodologies that enable 2-8 week GPU delivery when traditional channels quote 12-24 weeks.
+            <p className="text-xl text-gray-300 leading-relaxed max-w-4xl mx-auto">
+              Meet the procurement specialists who've spent quarter-centuries building the relationships, expertise, 
+              and methodologies that enable <span className="text-green-400 font-semibold">2-8 week GPU delivery</span> when traditional channels quote 12-24 weeks.
             </p>
           </div>
 
-          {/* Founder Profile */}
-          <div className="bg-blue-50 p-8 rounded-lg mb-12">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Founder Profile with Premium Glassmorphism */}
+          <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-2xl border border-white/20 rounded-3xl p-12 mb-16 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-green-400/20 to-emerald-500/20 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-br from-blue-400/15 to-cyan-500/15 rounded-full blur-2xl"></div>
+            
+            <div className="relative z-10 grid lg:grid-cols-2 gap-16 items-center">
               <div>
-                <h3 className="text-3xl font-bold text-blue-900 mb-4">Leadership: 25+ Years Global Sourcing Authority</h3>
-                <p className="text-blue-800 text-lg mb-6">
+                <h3 className="text-4xl font-black text-white mb-6">
+                  Leadership: <span className="bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">25+ Years</span>
+                  <br />Global Sourcing Authority
+                </h3>
+                <p className="text-gray-300 text-lg mb-8 leading-relaxed">
                   Our founding team combines enterprise hardware procurement expertise spanning four technology cycles: 
-                  server virtualization (2000s), HPC adoption (2010s), machine learning infrastructure (2015-2020), 
-                  and now AI-scale GPU deployment (2020-present).
+                  <span className="text-blue-400">server virtualization (2000s)</span>, <span className="text-green-400">HPC adoption (2010s)</span>, 
+                  <span className="text-emerald-400">machine learning infrastructure (2015-2020)</span>, 
+                  and now <span className="text-cyan-400 font-semibold">AI-scale GPU deployment (2020-present)</span>.
                 </p>
                 
-                <div className="space-y-4">
-                  <div className="flex items-start gap-3">
-                    <span className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></span>
+                <div className="space-y-6">
+                  <div className="flex items-start gap-6 group">
+                    <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                      <div className="w-3 h-3 bg-white rounded-full"></div>
+                    </div>
                     <div>
-                      <div className="font-bold text-blue-900">Enterprise Procurement Background</div>
-                      <div className="text-blue-700 text-sm">Led $500M+ hardware acquisitions for Fortune 500 data center expansions across US, EMEA, APAC regions</div>
+                      <h4 className="text-xl font-bold text-white mb-2">Enterprise Procurement Background</h4>
+                      <p className="text-gray-400 leading-relaxed">Led $500M+ hardware acquisitions for Fortune 500 data center expansions across US, EMEA, APAC regions</p>
                     </div>
                   </div>
-                  <div className="flex items-start gap-3">
-                    <span className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></span>
+                  
+                  <div className="flex items-start gap-6 group">
+                    <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-cyan-600 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                      <div className="w-3 h-3 bg-white rounded-full"></div>
+                    </div>
                     <div>
-                      <div className="font-bold text-blue-900">International Trade Expertise</div>
-                      <div className="text-blue-700 text-sm">Managed cross-border transactions across 47 countries with specialized expertise in USMCA, EU-Asia trade agreements</div>
+                      <h4 className="text-xl font-bold text-white mb-2">International Trade Expertise</h4>
+                      <p className="text-gray-400 leading-relaxed">Managed cross-border transactions across 47 countries with specialized expertise in USMCA, EU-Asia trade agreements</p>
                     </div>
                   </div>
-                  <div className="flex items-start gap-3">
-                    <span className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></span>
+                  
+                  <div className="flex items-start gap-6 group">
+                    <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                      <div className="w-3 h-3 bg-white rounded-full"></div>
+                    </div>
                     <div>
-                      <div className="font-bold text-blue-900">Crisis Procurement Specialization</div>
-                      <div className="text-blue-700 text-sm">Developed emergency sourcing protocols during 2008 financial crisis, 2011 Japan supply disruption, 2020 COVID shortages</div>
+                      <h4 className="text-xl font-bold text-white mb-2">Crisis Procurement Specialization</h4>
+                      <p className="text-gray-400 leading-relaxed">Developed emergency sourcing protocols during 2008 financial crisis, 2011 Japan supply disruption, 2020 COVID shortages</p>
                     </div>
                   </div>
-                  <div className="flex items-start gap-3">
-                    <span className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></span>
+                  
+                  <div className="flex items-start gap-6 group">
+                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                      <div className="w-3 h-3 bg-white rounded-full"></div>
+                    </div>
                     <div>
-                      <div className="font-bold text-blue-900">AI Hardware Pioneer</div>
-                      <div className="text-blue-700 text-sm">Early adopter relationships with NVIDIA Tesla (2007), V100 enterprise deployments (2017), H100 beta partnerships (2022)</div>
+                      <h4 className="text-xl font-bold text-white mb-2">AI Hardware Pioneer</h4>
+                      <p className="text-gray-400 leading-relaxed">Early adopter relationships with NVIDIA Tesla (2007), V100 enterprise deployments (2017), H100 beta partnerships (2022)</p>
                     </div>
                   </div>
                 </div>
               </div>
               
-              <div className="bg-white p-6 rounded-lg shadow-lg">
-                <h4 className="text-2xl font-bold text-gray-900 mb-6 text-center">Career Highlights & Industry Recognition</h4>
-                <div className="space-y-4">
-                  <div className="border-l-4 border-green-500 pl-4">
-                    <div className="font-bold text-green-700">2023: AI Hardware Procurement Excellence</div>
-                    <div className="text-sm text-gray-600">Recognized by TechProcurement.com for innovative commission-based GPU sourcing methodology</div>
-                  </div>
-                  <div className="border-l-4 border-blue-500 pl-4">
-                    <div className="font-bold text-blue-700">2022: NVIDIA Partner Network Elite Status</div>
-                    <div className="text-sm text-gray-600">Achieved highest tier partnership for enterprise AI infrastructure deployment expertise</div>
-                  </div>
-                  <div className="border-l-4 border-purple-500 pl-4">
-                    <div className="font-bold text-purple-700">2021: Global Supply Chain Innovation Award</div>
-                    <div className="text-sm text-gray-600">International Trade Council recognition for geographic arbitrage procurement methodology</div>
-                  </div>
-                  <div className="border-l-4 border-orange-500 pl-4">
-                    <div className="font-bold text-orange-700">2019: Enterprise Procurement Leadership</div>
-                    <div className="text-sm text-gray-600">Chief Procurement Officer Association keynote on alternative sourcing channel development</div>
+              <div className="bg-gradient-to-br from-white/15 to-white/10 backdrop-blur-xl border border-white/30 rounded-3xl p-8 relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-full blur-2xl"></div>
+                <div className="relative z-10">
+                  <h4 className="text-3xl font-bold text-white mb-8 text-center">Career Highlights & Industry Recognition</h4>
+                  <div className="space-y-6">
+                    <div className="border-l-4 border-green-500 pl-6 py-3 bg-green-500/10 rounded-r-xl">
+                      <div className="font-bold text-green-300 text-lg">2023: AI Hardware Procurement Excellence</div>
+                      <div className="text-sm text-gray-300 mt-1">Recognized by TechProcurement.com for innovative commission-based GPU sourcing methodology</div>
+                    </div>
+                    <div className="border-l-4 border-blue-500 pl-6 py-3 bg-blue-500/10 rounded-r-xl">
+                      <div className="font-bold text-blue-300 text-lg">2022: NVIDIA Partner Network Elite Status</div>
+                      <div className="text-sm text-gray-300 mt-1">Achieved highest tier partnership for enterprise AI infrastructure deployment expertise</div>
+                    </div>
+                    <div className="border-l-4 border-purple-500 pl-6 py-3 bg-purple-500/10 rounded-r-xl">
+                      <div className="font-bold text-purple-300 text-lg">2021: Global Supply Chain Innovation Award</div>
+                      <div className="text-sm text-gray-300 mt-1">International Trade Council recognition for geographic arbitrage procurement methodology</div>
+                    </div>
+                    <div className="border-l-4 border-orange-500 pl-6 py-3 bg-orange-500/10 rounded-r-xl">
+                      <div className="font-bold text-orange-300 text-lg">2019: Enterprise Procurement Leadership</div>
+                      <div className="text-sm text-gray-300 mt-1">Chief Procurement Officer Association keynote on alternative sourcing channel development</div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
           
-          {/* Team Expertise Breakdown */}
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-green-50 p-6 rounded-lg border-l-4 border-green-600">
-              <h4 className="text-xl font-bold text-green-900 mb-4">Global Sourcing Team</h4>
-              <p className="text-green-800 mb-4">15+ specialists across Americas, EMEA, APAC with deep distributor and manufacturer relationships</p>
-              <div className="space-y-2 text-sm text-green-700">
-                <div>• <strong>Americas Lead:</strong> 12 years CDW/SHI/Insight partnership management</div>
-                <div>• <strong>LATAM Specialist:</strong> Native Spanish/Portuguese, Mexico/Brazil trade expertise</div>
-                <div>• <strong>APAC Director:</strong> Direct relationships with Moore Threads, VastaiTech, MetaX</div>
-                <div>• <strong>EU Coordinator:</strong> Brexit/trade compliance, alternative allocation channels</div>
-              </div>
-            </div>
-            
-            <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-600">
-              <h4 className="text-xl font-bold text-blue-900 mb-4">Technical Advisory Board</h4>
-              <p className="text-blue-800 mb-4">AI infrastructure experts ensuring optimal hardware-software matching for enterprise deployments</p>
-              <div className="space-y-2 text-sm text-blue-700">
-                <div>• <strong>Former NVIDIA Engineering:</strong> GPU architecture optimization, cooling/power analysis</div>
-                <div>• <strong>Data Center Design:</strong> 20+ years hyperscale infrastructure, capacity planning</div>
-                <div>• <strong>ML Infrastructure:</strong> PhD Computer Science, LLM training hardware requirements</div>
-                <div>• <strong>Enterprise AI:</strong> CTO-level experience, Fortune 500 AI transformation</div>
-              </div>
-            </div>
-            
-            <div className="bg-purple-50 p-6 rounded-lg border-l-4 border-purple-600">
-              <h4 className="text-xl font-bold text-purple-900 mb-4">Operations & Logistics</h4>
-              <p className="text-purple-800 mb-4">Crisis procurement specialists trained on emergency hardware sourcing and expedited delivery</p>
-              <div className="space-y-2 text-sm text-purple-700">
-                <div>• <strong>Crisis Procurement Lead:</strong> 24/7 availability, alternative allocation emergency access</div>
-                <div>• <strong>Customs/Trade Compliance:</strong> International shipping, duty optimization, regulatory</div>
-                <div>• <strong>Logistics Coordination:</strong> White-glove delivery, installation, integration support</div>
-                <div>• <strong>Quality Assurance:</strong> Hardware authentication, warranty validation, performance testing</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Unmatched Expertise & Capabilities */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              Capabilities No Traditional Consultant Can Match
-            </h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-8">
-              Our 25+ year investment in global relationships, alternative allocation channels, and crisis procurement methodologies creates competitive advantages that flat-fee consultants simply cannot replicate.
-            </p>
-            
-            {/* Capability Comparison */}
-            <div className="bg-white p-6 rounded-lg shadow-lg mb-12">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Why Enterprise CTOs Choose Our Commission-Based Model</h3>
-              <div className="grid md:grid-cols-3 gap-6 text-center">
-                <div className="p-4 bg-green-50 rounded-lg">
-                  <div className="text-3xl font-bold text-green-600 mb-2">$0</div>
-                  <div className="font-semibold text-green-800">Upfront Risk</div>
-                  <div className="text-sm text-green-600">vs $50K-$200K+ flat fees</div>
+          {/* Team Expertise Breakdown with Premium Cards */}
+          <div className="grid md:grid-cols-3 gap-12">
+            <div className="group relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-2xl border border-white/20 rounded-3xl p-10 hover:bg-white/15 transform hover:scale-105 hover:-translate-y-3 transition-all duration-700 overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-green-400/30 to-emerald-500/30 rounded-full blur-3xl group-hover:w-40 group-hover:h-40 transition-all duration-700"></div>
+              <div className="absolute -bottom-10 -left-10 w-20 h-20 bg-gradient-to-br from-green-500/20 to-emerald-600/20 rounded-full blur-2xl group-hover:w-28 group-hover:h-28 transition-all duration-700"></div>
+              <div className="relative z-10">
+                <div 
+                  className="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-600 rounded-3xl flex items-center justify-center mb-8 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 shadow-2xl shadow-green-500/40"
+                  style={{
+                    background: 'linear-gradient(135deg, #10b981 0%, #059669 100%)',
+                    boxShadow: '0 20px 40px rgba(16, 185, 129, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.1) inset'
+                  }}
+                >
+                  <span className="text-white text-2xl">🌍</span>
                 </div>
-                <div className="p-4 bg-blue-50 rounded-lg">
-                  <div className="text-3xl font-bold text-blue-600 mb-2">2-8</div>
-                  <div className="font-semibold text-blue-800">Weeks Delivery</div>
-                  <div className="text-sm text-blue-600">vs 12-24 weeks traditional</div>
-                </div>
-                <div className="p-4 bg-purple-50 rounded-lg">
-                  <div className="text-3xl font-bold text-purple-600 mb-2">95%</div>
-                  <div className="font-semibold text-purple-800">Success Rate</div>
-                  <div className="text-sm text-purple-600">vs no guarantees</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Enhanced Expertise Grid */}
-          <div className="grid lg:grid-cols-2 gap-8 mb-16">
-            <div className="bg-blue-900 text-white p-8 rounded-lg">
-              <h3 className="text-2xl font-bold mb-6">🌍 Global Sourcing Network Mastery</h3>
-              <p className="text-blue-200 mb-6">Quarter-century investment in international procurement relationships that enable allocation access when traditional channels fail.</p>
-              
-              <div className="space-y-4">
-                <div>
-                  <h4 className="font-bold text-blue-300 mb-2">US Domestic Authority (15+ years)</h4>
-                  <div className="bg-blue-800 p-4 rounded text-sm space-y-1">
-                    <div>• <strong>CDW Partnership:</strong> Direct access to $20B+ enterprise distribution, government GSA contracts</div>
-                    <div>• <strong>SHI Relationship:</strong> Fortune 500 procurement channel, rapid deployment specialists</div>
-                    <div>• <strong>Insight Alliance:</strong> Digital transformation focus, AI infrastructure optimization experts</div>
-                    <div>• <strong>Arrow/Avnet:</strong> Component-level sourcing, custom configuration capabilities</div>
+                <h4 className="text-3xl font-black text-white mb-6 group-hover:text-green-300 transition-colors duration-300">
+                  Global Sourcing Team
+                </h4>
+                <p className="text-gray-300 leading-relaxed text-lg group-hover:text-gray-200 transition-colors duration-300 mb-8">
+                  15+ specialists across Americas, EMEA, APAC with deep distributor and manufacturer relationships
+                </p>
+                <div className="space-y-4 text-sm text-gray-300">
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                    <span><strong className="text-green-400">Americas Lead:</strong> 12 years CDW/SHI/Insight partnership management</span>
                   </div>
-                </div>
-                
-                <div>
-                  <h4 className="font-bold text-blue-300 mb-2">LATAM Market Penetration (12+ years)</h4>
-                  <div className="bg-blue-800 p-4 rounded text-sm space-y-1">
-                    <div>• <strong>Mexico (USMCA):</strong> 15-25% cost arbitrage, streamlined customs, assembly partnerships</div>
-                    <div>• <strong>Brazil (Local Assembly):</strong> 20-35% savings via domestic production, tax incentives</div>
-                    <div>• <strong>Colombia (Trade Zone):</strong> 18-30% arbitrage, free trade zone advantages</div>
-                    <div>• <strong>Argentina (Currency):</strong> Multi-currency hedging, exchange rate optimization</div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                    <span><strong className="text-green-400">LATAM Specialist:</strong> Native Spanish/Portuguese, Mexico/Brazil trade expertise</span>
                   </div>
-                </div>
-                
-                <div>
-                  <h4 className="font-bold text-blue-300 mb-2">Asian Alternative Allocation (10+ years)</h4>
-                  <div className="bg-blue-800 p-4 rounded text-sm space-y-1">
-                    <div>• <strong>Moore Threads:</strong> NVIDIA-independent MTT S4000 series, AI inference specialization</div>
-                    <div>• <strong>VastaiTech:</strong> VA1 training chips, alternative architecture access</div>
-                    <div>• <strong>MetaX:</strong> C500 enterprise series, scalable AI infrastructure</div>
-                    <div>• <strong>TSMC Ecosystem:</strong> Advanced packaging partnerships, next-gen early access</div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                    <span><strong className="text-green-400">APAC Director:</strong> Direct relationships with Moore Threads, VastaiTech, MetaX</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                    <span><strong className="text-green-400">EU Coordinator:</strong> Brexit/trade compliance, alternative allocation channels</span>
                   </div>
                 </div>
               </div>
             </div>
             
-            <div className="bg-green-900 text-white p-8 rounded-lg">
-              <h3 className="text-2xl font-bold mb-6">🚨 Crisis Procurement Methodology</h3>
-              <p className="text-green-200 mb-6">Emergency sourcing protocols developed through four major supply chain disruptions over 25 years.</p>
-              
-              <div className="space-y-4">
-                <div>
-                  <h4 className="font-bold text-green-300 mb-2">Emergency Response Protocol</h4>
-                  <div className="bg-green-800 p-4 rounded text-sm space-y-1">
-                    <div>• <strong>0-4 Hours:</strong> Requirement analysis, global inventory scan, supplier activation</div>
-                    <div>• <strong>4-24 Hours:</strong> Allocation confirmation, pricing negotiation, contract execution</div>
-                    <div>• <strong>1-3 Days:</strong> Logistics coordination, customs pre-clearance, expedited shipping</div>
-                    <div>• <strong>2-8 Weeks:</strong> Hardware delivery, installation support, performance validation</div>
+            <div className="group relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-2xl border border-white/20 rounded-3xl p-10 hover:bg-white/15 transform hover:scale-105 hover:-translate-y-3 transition-all duration-700 overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-400/30 to-cyan-500/30 rounded-full blur-3xl group-hover:w-40 group-hover:h-40 transition-all duration-700"></div>
+              <div className="absolute -bottom-10 -left-10 w-20 h-20 bg-gradient-to-br from-blue-500/20 to-cyan-600/20 rounded-full blur-2xl group-hover:w-28 group-hover:h-28 transition-all duration-700"></div>
+              <div className="relative z-10">
+                <div 
+                  className="w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-3xl flex items-center justify-center mb-8 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 shadow-2xl shadow-blue-500/40"
+                  style={{
+                    background: 'linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%)',
+                    boxShadow: '0 20px 40px rgba(59, 130, 246, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.1) inset'
+                  }}
+                >
+                  <span className="text-white text-2xl">💻</span>
+                </div>
+                <h4 className="text-3xl font-black text-white mb-6 group-hover:text-blue-300 transition-colors duration-300">
+                  Technical Advisory Board
+                </h4>
+                <p className="text-gray-300 leading-relaxed text-lg group-hover:text-gray-200 transition-colors duration-300 mb-8">
+                  AI infrastructure experts ensuring optimal hardware-software matching for enterprise deployments
+                </p>
+                <div className="space-y-4 text-sm text-gray-300">
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
+                    <span><strong className="text-blue-400">Former NVIDIA Engineering:</strong> GPU architecture optimization, cooling/power analysis</span>
                   </div>
-                </div>
-                
-                <div>
-                  <h4 className="font-bold text-green-300 mb-2">Alternative Allocation Channels</h4>
-                  <div className="bg-green-800 p-4 rounded text-sm space-y-1">
-                    <div>• <strong>Secondary Markets:</strong> Verified enterprise-grade hardware, warranty transfer</div>
-                    <div>• <strong>Manufacturer Direct:</strong> Bypass distributor allocation, executive relationships</div>
-                    <div>• <strong>Geographic Reallocation:</strong> Cross-border inventory optimization, duty management</div>
-                    <div>• <strong>Early Access Programs:</strong> Beta/development hardware for immediate availability</div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
+                    <span><strong className="text-blue-400">Data Center Design:</strong> 20+ years hyperscale infrastructure, capacity planning</span>
                   </div>
-                </div>
-                
-                <div>
-                  <h4 className="font-bold text-green-300 mb-2">Proven Crisis Responses</h4>
-                  <div className="bg-green-800 p-4 rounded text-sm space-y-1">
-                    <div>• <strong>2008 Financial Crisis:</strong> Developed alternative financing, helped 50+ companies avoid IT delays</div>
-                    <div>• <strong>2011 Japan Tsunami:</strong> Created Pacific supply chain workarounds, zero client project delays</div>
-                    <div>• <strong>2020 COVID Disruption:</strong> Enabled remote work transitions via emergency hardware sourcing</div>
-                    <div>• <strong>2022-2024 GPU Shortage:</strong> Alternative allocation access prevented AI initiative delays</div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
+                    <span><strong className="text-blue-400">ML Infrastructure:</strong> PhD Computer Science, LLM training hardware requirements</span>
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          {/* Technical Authority & Commission Alignment */}
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-lg shadow-lg border-l-4 border-purple-600">
-              <h3 className="text-xl font-bold text-purple-900 mb-4">💻 Deep Technical Authority</h3>
-              <p className="text-purple-800 mb-4">AI infrastructure expertise ensuring optimal hardware-software matching for enterprise performance requirements.</p>
-              <div className="space-y-3 text-sm text-purple-700">
-                <div className="bg-purple-50 p-3 rounded">
-                  <div className="font-bold">GPU Architecture Optimization</div>
-                  <div>Memory bandwidth analysis, tensor core utilization, multi-GPU scaling for LLM training/inference</div>
-                </div>
-                <div className="bg-purple-50 p-3 rounded">
-                  <div className="font-bold">Data Center Integration</div>
-                  <div>Power/cooling requirements, rack density optimization, network topology for distributed training</div>
-                </div>
-                <div className="bg-purple-50 p-3 rounded">
-                  <div className="font-bold">Performance Benchmarking</div>
-                  <div>Workload-specific testing, FLOPS/$ analysis, TCO modeling for enterprise decision support</div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
+                    <span><strong className="text-blue-400">Enterprise AI:</strong> CTO-level experience, Fortune 500 AI transformation</span>
+                  </div>
                 </div>
               </div>
             </div>
             
-            <div className="bg-white p-8 rounded-lg shadow-lg border-l-4 border-green-600">
-              <h3 className="text-xl font-bold text-green-900 mb-4">💰 Commission Model Advantages</h3>
-              <p className="text-green-800 mb-4">Success-based alignment that fundamentally changes procurement incentives compared to traditional flat-fee consultants.</p>
-              <div className="space-y-3 text-sm text-green-700">
-                <div className="bg-green-50 p-3 rounded">
-                  <div className="font-bold">Risk Elimination</div>
-                  <div>Zero upfront cost, payment only on successful delivery with performance guarantees</div>
+            <div className="group relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-2xl border border-white/20 rounded-3xl p-10 hover:bg-white/15 transform hover:scale-105 hover:-translate-y-3 transition-all duration-700 overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-purple-400/30 to-pink-500/30 rounded-full blur-3xl group-hover:w-40 group-hover:h-40 transition-all duration-700"></div>
+              <div className="absolute -bottom-10 -left-10 w-20 h-20 bg-gradient-to-br from-purple-500/20 to-pink-600/20 rounded-full blur-2xl group-hover:w-28 group-hover:h-28 transition-all duration-700"></div>
+              <div className="relative z-10">
+                <div 
+                  className="w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-600 rounded-3xl flex items-center justify-center mb-8 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 shadow-2xl shadow-purple-500/40"
+                  style={{
+                    background: 'linear-gradient(135deg, #a855f7 0%, #ec4899 100%)',
+                    boxShadow: '0 20px 40px rgba(168, 85, 247, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.1) inset'
+                  }}
+                >
+                  <span className="text-white text-2xl">🚀</span>
                 </div>
-                <div className="bg-green-50 p-3 rounded">
-                  <div className="font-bold">Speed Incentivization</div>
-                  <div>Commission earned only upon delivery creates maximum motivation for expedited procurement</div>
-                </div>
-                <div className="bg-green-50 p-3 rounded">
-                  <div className="font-bold">Total Cost Optimization</div>
-                  <div>Geographic arbitrage savings (15-60%) often exceed commission fees, delivering net cost reduction</div>
-                </div>
-              </div>
-            </div>
-            
-            <div className="bg-white p-8 rounded-lg shadow-lg border-l-4 border-orange-600">
-              <h3 className="text-xl font-bold text-orange-900 mb-4">🏢 Enterprise Integration</h3>
-              <p className="text-orange-800 mb-4">End-to-end project management for complex multi-stakeholder AI infrastructure deployments at Fortune 500 scale.</p>
-              <div className="space-y-3 text-sm text-orange-700">
-                <div className="bg-orange-50 p-3 rounded">
-                  <div className="font-bold">Stakeholder Coordination</div>
-                  <div>CTO, procurement, finance, legal, and facilities alignment for seamless project execution</div>
-                </div>
-                <div className="bg-orange-50 p-3 rounded">
-                  <div className="font-bold">Compliance Management</div>
-                  <div>Security clearance, export controls, SOX/SOC compliance for regulated enterprise environments</div>
-                </div>
-                <div className="bg-orange-50 p-3 rounded">
-                  <div className="font-bold">Financing Facilitation</div>
-                  <div>Capital equipment leasing, vendor financing, OpEx conversion for budget optimization</div>
+                <h4 className="text-3xl font-black text-white mb-6 group-hover:text-purple-300 transition-colors duration-300">
+                  Operations & Logistics
+                </h4>
+                <p className="text-gray-300 leading-relaxed text-lg group-hover:text-gray-200 transition-colors duration-300 mb-8">
+                  Crisis procurement specialists trained on emergency hardware sourcing and expedited delivery
+                </p>
+                <div className="space-y-4 text-sm text-gray-300">
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse"></div>
+                    <span><strong className="text-purple-400">Crisis Procurement Lead:</strong> 24/7 availability, alternative allocation emergency access</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse"></div>
+                    <span><strong className="text-purple-400">Customs/Trade Compliance:</strong> International shipping, duty optimization, regulatory</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse"></div>
+                    <span><strong className="text-purple-400">Logistics Coordination:</strong> White-glove delivery, installation, integration support</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse"></div>
+                    <span><strong className="text-purple-400">Quality Assurance:</strong> Hardware authentication, warranty validation, performance testing</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -360,39 +463,475 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Quantifiable Success Stories & Track Record */}
-      <section className="py-20 bg-blue-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              $2.4B+ Sourced: 25+ Years of Quantifiable Enterprise Success
+      {/* Unmatched Expertise & Capabilities with Premium Design */}
+      <section className="py-32 bg-black relative">
+        <div className="max-w-8xl mx-auto px-6 lg:px-12">
+          <div className="text-center mb-20">
+            <div className="inline-flex items-center gap-2 bg-green-500/10 border border-green-500/20 px-4 py-2 rounded-full mb-8">
+              <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+              <span className="text-green-300 font-medium text-sm">UNMATCHED CAPABILITIES</span>
+            </div>
+            <h2 className="text-5xl md:text-6xl font-black text-white mb-8 leading-tight">
+              Capabilities No Traditional 
+              <br />
+              <span className="bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">Consultant Can Match</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-8">
-              From Fortune 500 data center expansions to emergency AI startup procurement, our track record spans four technology cycles with consistently superior results vs traditional flat-fee consultants.
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed">
+              Our <span className="text-green-400 font-semibold">25+ year investment</span> in global relationships, alternative allocation channels, 
+              and crisis procurement methodologies creates competitive advantages that flat-fee consultants simply cannot replicate.
+            </p>
+            
+            {/* Capability Comparison with Premium Styling */}
+            <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-2xl border border-white/20 rounded-3xl p-12 mb-20 relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-48 h-48 bg-gradient-to-br from-green-400/20 to-emerald-500/20 rounded-full blur-3xl"></div>
+              <div className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-br from-blue-400/15 to-cyan-500/15 rounded-full blur-2xl"></div>
+              
+              <div className="relative z-10">
+                <h3 className="text-3xl font-black text-white mb-12 text-center">
+                  Why Enterprise CTOs Choose Our <span className="bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">Commission-Based Model</span>
+                </h3>
+                <div className="grid md:grid-cols-3 gap-8 text-center">
+                  <div className="group p-8 bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-2xl border border-green-500/30 hover:bg-green-500/30 transition-all duration-300">
+                    <div 
+                      className="text-5xl font-black bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent mb-3 group-hover:scale-110 transition-transform duration-300"
+                      style={{
+                        background: 'linear-gradient(135deg, #4ade80 0%, #10b981 100%)',
+                        WebkitBackgroundClip: 'text',
+                        WebkitTextFillColor: 'transparent'
+                      }}
+                    >
+                      $0
+                    </div>
+                    <div className="font-bold text-green-300 text-xl mb-2">Upfront Risk</div>
+                    <div className="text-sm text-gray-300">vs $50K-$200K+ flat fees</div>
+                    <div className="mt-4 h-1.5 w-16 mx-auto bg-gradient-to-r from-green-400 to-emerald-500 rounded-full group-hover:w-20 transition-all duration-300"></div>
+                  </div>
+                  <div className="group p-8 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl border border-blue-500/30 hover:bg-blue-500/30 transition-all duration-300">
+                    <div 
+                      className="text-5xl font-black bg-gradient-to-r from-blue-400 to-cyan-500 bg-clip-text text-transparent mb-3 group-hover:scale-110 transition-transform duration-300"
+                      style={{
+                        background: 'linear-gradient(135deg, #60a5fa 0%, #22d3ee 100%)',
+                        WebkitBackgroundClip: 'text',
+                        WebkitTextFillColor: 'transparent'
+                      }}
+                    >
+                      2-8
+                    </div>
+                    <div className="font-bold text-blue-300 text-xl mb-2">Weeks Delivery</div>
+                    <div className="text-sm text-gray-300">vs 12-24 weeks traditional</div>
+                    <div className="mt-4 h-1.5 w-16 mx-auto bg-gradient-to-r from-blue-400 to-cyan-500 rounded-full group-hover:w-20 transition-all duration-300"></div>
+                  </div>
+                  <div className="group p-8 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-2xl border border-purple-500/30 hover:bg-purple-500/30 transition-all duration-300">
+                    <div 
+                      className="text-5xl font-black bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent mb-3 group-hover:scale-110 transition-transform duration-300"
+                      style={{
+                        background: 'linear-gradient(135deg, #a855f7 0%, #ec4899 100%)',
+                        WebkitBackgroundClip: 'text',
+                        WebkitTextFillColor: 'transparent'
+                      }}
+                    >
+                      95%
+                    </div>
+                    <div className="font-bold text-purple-300 text-xl mb-2">Success Rate</div>
+                    <div className="text-sm text-gray-300">vs no guarantees</div>
+                    <div className="mt-4 h-1.5 w-16 mx-auto bg-gradient-to-r from-purple-400 to-pink-500 rounded-full group-hover:w-20 transition-all duration-300"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Enhanced Expertise Grid with Premium Design */}
+          <div className="grid lg:grid-cols-2 gap-12 mb-20">
+            <div className="group relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-2xl border border-white/20 rounded-3xl p-12 hover:bg-white/15 transition-all duration-700 overflow-hidden">
+              <div className="absolute top-0 right-0 w-48 h-48 bg-gradient-to-br from-blue-400/30 to-cyan-500/30 rounded-full blur-3xl group-hover:w-56 group-hover:h-56 transition-all duration-700"></div>
+              <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-gradient-to-br from-blue-500/20 to-cyan-600/20 rounded-full blur-2xl group-hover:w-40 group-hover:h-40 transition-all duration-700"></div>
+              
+              <div className="relative z-10">
+                <div className="flex items-center gap-4 mb-8">
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-2xl flex items-center justify-center text-2xl group-hover:scale-110 group-hover:rotate-12 transition-all duration-500">
+                    🌍
+                  </div>
+                  <h3 className="text-4xl font-black text-white group-hover:text-blue-300 transition-colors duration-300">
+                    Global Sourcing Network Mastery
+                  </h3>
+                </div>
+                <p className="text-gray-300 text-lg mb-8 leading-relaxed group-hover:text-gray-200 transition-colors duration-300">
+                  Quarter-century investment in international procurement relationships that enable allocation access when traditional channels fail.
+                </p>
+                
+                <div className="space-y-8">
+                  <div>
+                    <h4 className="font-black text-blue-300 text-xl mb-4 group-hover:text-blue-200 transition-colors duration-300">US Domestic Authority (15+ years)</h4>
+                    <div className="bg-gradient-to-br from-blue-500/20 to-cyan-500/20 backdrop-blur-xl border border-blue-500/30 p-6 rounded-2xl space-y-3">
+                      <div className="flex items-center gap-3 text-gray-300">
+                        <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
+                        <span><strong className="text-blue-400">CDW Partnership:</strong> Direct access to $20B+ enterprise distribution, government GSA contracts</span>
+                      </div>
+                      <div className="flex items-center gap-3 text-gray-300">
+                        <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
+                        <span><strong className="text-blue-400">SHI Relationship:</strong> Fortune 500 procurement channel, rapid deployment specialists</span>
+                      </div>
+                      <div className="flex items-center gap-3 text-gray-300">
+                        <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
+                        <span><strong className="text-blue-400">Insight Alliance:</strong> Digital transformation focus, AI infrastructure optimization experts</span>
+                      </div>
+                      <div className="flex items-center gap-3 text-gray-300">
+                        <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
+                        <span><strong className="text-blue-400">Arrow/Avnet:</strong> Component-level sourcing, custom configuration capabilities</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <h4 className="font-black text-cyan-300 text-xl mb-4 group-hover:text-cyan-200 transition-colors duration-300">LATAM Market Penetration (12+ years)</h4>
+                    <div className="bg-gradient-to-br from-cyan-500/20 to-emerald-500/20 backdrop-blur-xl border border-cyan-500/30 p-6 rounded-2xl space-y-3">
+                      <div className="flex items-center gap-3 text-gray-300">
+                        <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
+                        <span><strong className="text-cyan-400">Mexico (USMCA):</strong> 15-25% cost arbitrage, streamlined customs, assembly partnerships</span>
+                      </div>
+                      <div className="flex items-center gap-3 text-gray-300">
+                        <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
+                        <span><strong className="text-cyan-400">Brazil (Local Assembly):</strong> 20-35% savings via domestic production, tax incentives</span>
+                      </div>
+                      <div className="flex items-center gap-3 text-gray-300">
+                        <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
+                        <span><strong className="text-cyan-400">Colombia (Trade Zone):</strong> 18-30% arbitrage, free trade zone advantages</span>
+                      </div>
+                      <div className="flex items-center gap-3 text-gray-300">
+                        <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
+                        <span><strong className="text-cyan-400">Argentina (Currency):</strong> Multi-currency hedging, exchange rate optimization</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <h4 className="font-black text-emerald-300 text-xl mb-4 group-hover:text-emerald-200 transition-colors duration-300">Asian Alternative Allocation (10+ years)</h4>
+                    <div className="bg-gradient-to-br from-emerald-500/20 to-green-500/20 backdrop-blur-xl border border-emerald-500/30 p-6 rounded-2xl space-y-3">
+                      <div className="flex items-center gap-3 text-gray-300">
+                        <div className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
+                        <span><strong className="text-emerald-400">Moore Threads:</strong> NVIDIA-independent MTT S4000 series, AI inference specialization</span>
+                      </div>
+                      <div className="flex items-center gap-3 text-gray-300">
+                        <div className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
+                        <span><strong className="text-emerald-400">VastaiTech:</strong> VA1 training chips, alternative architecture access</span>
+                      </div>
+                      <div className="flex items-center gap-3 text-gray-300">
+                        <div className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
+                        <span><strong className="text-emerald-400">MetaX:</strong> C500 enterprise series, scalable AI infrastructure</span>
+                      </div>
+                      <div className="flex items-center gap-3 text-gray-300">
+                        <div className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
+                        <span><strong className="text-emerald-400">TSMC Ecosystem:</strong> Advanced packaging partnerships, next-gen early access</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="group relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-2xl border border-white/20 rounded-3xl p-12 hover:bg-white/15 transition-all duration-700 overflow-hidden">
+              <div className="absolute top-0 right-0 w-48 h-48 bg-gradient-to-br from-red-400/30 to-orange-500/30 rounded-full blur-3xl group-hover:w-56 group-hover:h-56 transition-all duration-700"></div>
+              <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-gradient-to-br from-red-500/20 to-orange-600/20 rounded-full blur-2xl group-hover:w-40 group-hover:h-40 transition-all duration-700"></div>
+              
+              <div className="relative z-10">
+                <div className="flex items-center gap-4 mb-8">
+                  <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-orange-600 rounded-2xl flex items-center justify-center text-2xl group-hover:scale-110 group-hover:rotate-12 transition-all duration-500">
+                    🚨
+                  </div>
+                  <h3 className="text-4xl font-black text-white group-hover:text-red-300 transition-colors duration-300">
+                    Crisis Procurement Methodology
+                  </h3>
+                </div>
+                <p className="text-gray-300 text-lg mb-8 leading-relaxed group-hover:text-gray-200 transition-colors duration-300">
+                  Emergency sourcing protocols developed through four major supply chain disruptions over 25 years.
+                </p>
+                
+                <div className="space-y-8">
+                  <div>
+                    <h4 className="font-black text-red-300 text-xl mb-4 group-hover:text-red-200 transition-colors duration-300">Emergency Response Protocol</h4>
+                    <div className="bg-gradient-to-br from-red-500/20 to-orange-500/20 backdrop-blur-xl border border-red-500/30 p-6 rounded-2xl space-y-3">
+                      <div className="flex items-center gap-3 text-gray-300">
+                        <div className="w-2 h-2 bg-red-400 rounded-full animate-pulse"></div>
+                        <span><strong className="text-red-400">0-4 Hours:</strong> Requirement analysis, global inventory scan, supplier activation</span>
+                      </div>
+                      <div className="flex items-center gap-3 text-gray-300">
+                        <div className="w-2 h-2 bg-red-400 rounded-full animate-pulse"></div>
+                        <span><strong className="text-red-400">4-24 Hours:</strong> Allocation confirmation, pricing negotiation, contract execution</span>
+                      </div>
+                      <div className="flex items-center gap-3 text-gray-300">
+                        <div className="w-2 h-2 bg-red-400 rounded-full animate-pulse"></div>
+                        <span><strong className="text-red-400">1-3 Days:</strong> Logistics coordination, customs pre-clearance, expedited shipping</span>
+                      </div>
+                      <div className="flex items-center gap-3 text-gray-300">
+                        <div className="w-2 h-2 bg-red-400 rounded-full animate-pulse"></div>
+                        <span><strong className="text-red-400">2-8 Weeks:</strong> Hardware delivery, installation support, performance validation</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <h4 className="font-black text-orange-300 text-xl mb-4 group-hover:text-orange-200 transition-colors duration-300">Alternative Allocation Channels</h4>
+                    <div className="bg-gradient-to-br from-orange-500/20 to-yellow-500/20 backdrop-blur-xl border border-orange-500/30 p-6 rounded-2xl space-y-3">
+                      <div className="flex items-center gap-3 text-gray-300">
+                        <div className="w-2 h-2 bg-orange-400 rounded-full animate-pulse"></div>
+                        <span><strong className="text-orange-400">Secondary Markets:</strong> Verified enterprise-grade hardware, warranty transfer</span>
+                      </div>
+                      <div className="flex items-center gap-3 text-gray-300">
+                        <div className="w-2 h-2 bg-orange-400 rounded-full animate-pulse"></div>
+                        <span><strong className="text-orange-400">Manufacturer Direct:</strong> Bypass distributor allocation, executive relationships</span>
+                      </div>
+                      <div className="flex items-center gap-3 text-gray-300">
+                        <div className="w-2 h-2 bg-orange-400 rounded-full animate-pulse"></div>
+                        <span><strong className="text-orange-400">Geographic Reallocation:</strong> Cross-border inventory optimization, duty management</span>
+                      </div>
+                      <div className="flex items-center gap-3 text-gray-300">
+                        <div className="w-2 h-2 bg-orange-400 rounded-full animate-pulse"></div>
+                        <span><strong className="text-orange-400">Early Access Programs:</strong> Beta/development hardware for immediate availability</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <h4 className="font-black text-yellow-300 text-xl mb-4 group-hover:text-yellow-200 transition-colors duration-300">Proven Crisis Responses</h4>
+                    <div className="bg-gradient-to-br from-yellow-500/20 to-amber-500/20 backdrop-blur-xl border border-yellow-500/30 p-6 rounded-2xl space-y-3">
+                      <div className="flex items-center gap-3 text-gray-300">
+                        <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></div>
+                        <span><strong className="text-yellow-400">2008 Financial Crisis:</strong> Developed alternative financing, helped 50+ companies avoid IT delays</span>
+                      </div>
+                      <div className="flex items-center gap-3 text-gray-300">
+                        <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></div>
+                        <span><strong className="text-yellow-400">2011 Japan Tsunami:</strong> Created Pacific supply chain workarounds, zero client project delays</span>
+                      </div>
+                      <div className="flex items-center gap-3 text-gray-300">
+                        <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></div>
+                        <span><strong className="text-yellow-400">2020 COVID Disruption:</strong> Enabled remote work transitions via emergency hardware sourcing</span>
+                      </div>
+                      <div className="flex items-center gap-3 text-gray-300">
+                        <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></div>
+                        <span><strong className="text-yellow-400">2022-2024 GPU Shortage:</strong> Alternative allocation access prevented AI initiative delays</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          {/* Technical Authority & Commission Alignment with Premium Cards */}
+          <div className="grid md:grid-cols-3 gap-12">
+            <div className="group relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-2xl border border-white/20 rounded-3xl p-10 hover:bg-white/15 transform hover:scale-105 hover:-translate-y-3 transition-all duration-700 overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-purple-400/30 to-pink-500/30 rounded-full blur-3xl group-hover:w-40 group-hover:h-40 transition-all duration-700"></div>
+              <div className="absolute -bottom-10 -left-10 w-20 h-20 bg-gradient-to-br from-purple-500/20 to-pink-600/20 rounded-full blur-2xl group-hover:w-28 group-hover:h-28 transition-all duration-700"></div>
+              <div className="relative z-10 text-center">
+                <div 
+                  className="w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-600 rounded-3xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 shadow-2xl shadow-purple-500/40"
+                  style={{
+                    background: 'linear-gradient(135deg, #a855f7 0%, #ec4899 100%)',
+                    boxShadow: '0 20px 40px rgba(168, 85, 247, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.1) inset'
+                  }}
+                >
+                  <span className="text-white text-2xl">💻</span>
+                </div>
+                <h3 className="text-3xl font-black text-white mb-6 group-hover:text-purple-300 transition-colors duration-300">
+                  Deep Technical Authority
+                </h3>
+                <p className="text-gray-300 leading-relaxed text-lg group-hover:text-gray-200 transition-colors duration-300 mb-8">
+                  AI infrastructure expertise ensuring optimal hardware-software matching for enterprise performance requirements.
+                </p>
+                <div className="space-y-6 text-left">
+                  <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 backdrop-blur-xl border border-purple-500/30 p-6 rounded-2xl">
+                    <div className="font-bold text-purple-300 text-lg mb-2">GPU Architecture Optimization</div>
+                    <div className="text-gray-300 text-sm">Memory bandwidth analysis, tensor core utilization, multi-GPU scaling for LLM training/inference</div>
+                  </div>
+                  <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 backdrop-blur-xl border border-purple-500/30 p-6 rounded-2xl">
+                    <div className="font-bold text-purple-300 text-lg mb-2">Data Center Integration</div>
+                    <div className="text-gray-300 text-sm">Power/cooling requirements, rack density optimization, network topology for distributed training</div>
+                  </div>
+                  <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 backdrop-blur-xl border border-purple-500/30 p-6 rounded-2xl">
+                    <div className="font-bold text-purple-300 text-lg mb-2">Performance Benchmarking</div>
+                    <div className="text-gray-300 text-sm">Workload-specific testing, FLOPS/$ analysis, TCO modeling for enterprise decision support</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="group relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-2xl border border-white/20 rounded-3xl p-10 hover:bg-white/15 transform hover:scale-105 hover:-translate-y-3 transition-all duration-700 overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-green-400/30 to-emerald-500/30 rounded-full blur-3xl group-hover:w-40 group-hover:h-40 transition-all duration-700"></div>
+              <div className="absolute -bottom-10 -left-10 w-20 h-20 bg-gradient-to-br from-green-500/20 to-emerald-600/20 rounded-full blur-2xl group-hover:w-28 group-hover:h-28 transition-all duration-700"></div>
+              <div className="relative z-10 text-center">
+                <div 
+                  className="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-600 rounded-3xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 shadow-2xl shadow-green-500/40"
+                  style={{
+                    background: 'linear-gradient(135deg, #10b981 0%, #059669 100%)',
+                    boxShadow: '0 20px 40px rgba(16, 185, 129, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.1) inset'
+                  }}
+                >
+                  <span className="text-white text-2xl">💰</span>
+                </div>
+                <h3 className="text-3xl font-black text-white mb-6 group-hover:text-green-300 transition-colors duration-300">
+                  Commission Model Advantages
+                </h3>
+                <p className="text-gray-300 leading-relaxed text-lg group-hover:text-gray-200 transition-colors duration-300 mb-8">
+                  Success-based alignment that fundamentally changes procurement incentives compared to traditional flat-fee consultants.
+                </p>
+                <div className="space-y-6 text-left">
+                  <div className="bg-gradient-to-br from-green-500/20 to-emerald-500/20 backdrop-blur-xl border border-green-500/30 p-6 rounded-2xl">
+                    <div className="font-bold text-green-300 text-lg mb-2">Risk Elimination</div>
+                    <div className="text-gray-300 text-sm">Zero upfront cost, payment only on successful delivery with performance guarantees</div>
+                  </div>
+                  <div className="bg-gradient-to-br from-green-500/20 to-emerald-500/20 backdrop-blur-xl border border-green-500/30 p-6 rounded-2xl">
+                    <div className="font-bold text-green-300 text-lg mb-2">Speed Incentivization</div>
+                    <div className="text-gray-300 text-sm">Commission earned only upon delivery creates maximum motivation for expedited procurement</div>
+                  </div>
+                  <div className="bg-gradient-to-br from-green-500/20 to-emerald-500/20 backdrop-blur-xl border border-green-500/30 p-6 rounded-2xl">
+                    <div className="font-bold text-green-300 text-lg mb-2">Total Cost Optimization</div>
+                    <div className="text-gray-300 text-sm">Geographic arbitrage savings (15-60%) often exceed commission fees, delivering net cost reduction</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="group relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-2xl border border-white/20 rounded-3xl p-10 hover:bg-white/15 transform hover:scale-105 hover:-translate-y-3 transition-all duration-700 overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-orange-400/30 to-yellow-500/30 rounded-full blur-3xl group-hover:w-40 group-hover:h-40 transition-all duration-700"></div>
+              <div className="absolute -bottom-10 -left-10 w-20 h-20 bg-gradient-to-br from-orange-500/20 to-yellow-600/20 rounded-full blur-2xl group-hover:w-28 group-hover:h-28 transition-all duration-700"></div>
+              <div className="relative z-10 text-center">
+                <div 
+                  className="w-20 h-20 bg-gradient-to-br from-orange-500 to-yellow-600 rounded-3xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 shadow-2xl shadow-orange-500/40"
+                  style={{
+                    background: 'linear-gradient(135deg, #f97316 0%, #ca8a04 100%)',
+                    boxShadow: '0 20px 40px rgba(249, 115, 22, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.1) inset'
+                  }}
+                >
+                  <span className="text-white text-2xl">🏢</span>
+                </div>
+                <h3 className="text-3xl font-black text-white mb-6 group-hover:text-orange-300 transition-colors duration-300">
+                  Enterprise Integration
+                </h3>
+                <p className="text-gray-300 leading-relaxed text-lg group-hover:text-gray-200 transition-colors duration-300 mb-8">
+                  End-to-end project management for complex multi-stakeholder AI infrastructure deployments at Fortune 500 scale.
+                </p>
+                <div className="space-y-6 text-left">
+                  <div className="bg-gradient-to-br from-orange-500/20 to-yellow-500/20 backdrop-blur-xl border border-orange-500/30 p-6 rounded-2xl">
+                    <div className="font-bold text-orange-300 text-lg mb-2">Stakeholder Coordination</div>
+                    <div className="text-gray-300 text-sm">CTO, procurement, finance, legal, and facilities alignment for seamless project execution</div>
+                  </div>
+                  <div className="bg-gradient-to-br from-orange-500/20 to-yellow-500/20 backdrop-blur-xl border border-orange-500/30 p-6 rounded-2xl">
+                    <div className="font-bold text-orange-300 text-lg mb-2">Compliance Management</div>
+                    <div className="text-gray-300 text-sm">Security clearance, export controls, SOX/SOC compliance for regulated enterprise environments</div>
+                  </div>
+                  <div className="bg-gradient-to-br from-orange-500/20 to-yellow-500/20 backdrop-blur-xl border border-orange-500/30 p-6 rounded-2xl">
+                    <div className="font-bold text-orange-300 text-lg mb-2">Financing Facilitation</div>
+                    <div className="text-gray-300 text-sm">Capital equipment leasing, vendor financing, OpEx conversion for budget optimization</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Quantifiable Success Stories & Track Record with Premium Design */}
+      <section className="py-32 bg-gradient-to-br from-gray-900 via-black to-gray-800 relative">
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5"></div>
+        
+        <div className="relative max-w-8xl mx-auto px-6 lg:px-12">
+          <div className="text-center mb-20">
+            <div className="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 px-4 py-2 rounded-full mb-8">
+              <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
+              <span className="text-blue-300 font-medium text-sm">PROVEN TRACK RECORD</span>
+            </div>
+            <h2 className="text-5xl md:text-6xl font-black text-white mb-8 leading-tight">
+              <span className="bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">$2.4B+</span> Sourced:
+              <br />
+              25+ Years of Quantifiable <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">Enterprise Success</span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+              From <span className="text-green-400 font-semibold">Fortune 500 data center expansions</span> to <span className="text-blue-400 font-semibold">emergency AI startup procurement</span>, 
+              our track record spans four technology cycles with consistently superior results vs traditional flat-fee consultants.
             </p>
           </div>
 
-          {/* Enhanced Success Metrics */}
-          <div className="grid md:grid-cols-4 gap-6 mb-16">
-            <div className="text-center p-8 bg-white rounded-lg shadow-lg border-l-4 border-green-600">
-              <div className="text-5xl font-bold text-green-600 mb-3">$2.4B+</div>
-              <div className="text-gray-900 font-bold text-xl mb-2">Hardware Sourced</div>
-              <div className="text-gray-600 text-sm">Total transaction value spanning servers, HPC, ML, AI infrastructure (1999-2024)</div>
+          {/* Enhanced Success Metrics with Premium Design */}
+          <div className="grid md:grid-cols-4 gap-8 mb-20">
+            <div className="group relative text-center p-10 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-2xl border border-white/20 rounded-3xl hover:bg-white/15 transform hover:scale-105 hover:-translate-y-2 transition-all duration-500 overflow-hidden">
+              <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-green-400/30 to-emerald-500/30 rounded-full blur-2xl group-hover:w-32 group-hover:h-32 transition-all duration-500"></div>
+              <div className="relative z-10">
+                <div 
+                  className="text-5xl md:text-6xl font-black bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent mb-4 group-hover:scale-110 transition-transform duration-500"
+                  style={{
+                    background: 'linear-gradient(135deg, #4ade80 0%, #10b981 100%)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    textShadow: '0 4px 20px rgba(16, 185, 129, 0.3)'
+                  }}
+                >
+                  $2.4B+
+                </div>
+                <div className="text-white font-bold text-xl mb-3 group-hover:text-green-300 transition-colors duration-300">Hardware Sourced</div>
+                <div className="text-gray-300 text-sm leading-relaxed">Total transaction value spanning servers, HPC, ML, AI infrastructure (1999-2024)</div>
+                <div className="mt-6 h-1.5 w-16 mx-auto bg-gradient-to-r from-green-400 to-emerald-500 rounded-full group-hover:w-24 group-hover:h-2 transition-all duration-500 shadow-lg shadow-green-500/50"></div>
+              </div>
             </div>
-            <div className="text-center p-8 bg-white rounded-lg shadow-lg border-l-4 border-blue-600">
-              <div className="text-5xl font-bold text-blue-600 mb-3">47</div>
-              <div className="text-gray-900 font-bold text-xl mb-2">Countries</div>
-              <div className="text-gray-600 text-sm">Global sourcing network with established supplier relationships and regulatory compliance</div>
+            
+            <div className="group relative text-center p-10 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-2xl border border-white/20 rounded-3xl hover:bg-white/15 transform hover:scale-105 hover:-translate-y-2 transition-all duration-500 overflow-hidden">
+              <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-blue-400/30 to-cyan-500/30 rounded-full blur-2xl group-hover:w-32 group-hover:h-32 transition-all duration-500"></div>
+              <div className="relative z-10">
+                <div 
+                  className="text-5xl md:text-6xl font-black bg-gradient-to-r from-blue-400 to-cyan-500 bg-clip-text text-transparent mb-4 group-hover:scale-110 transition-transform duration-500"
+                  style={{
+                    background: 'linear-gradient(135deg, #60a5fa 0%, #22d3ee 100%)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    textShadow: '0 4px 20px rgba(96, 165, 250, 0.3)'
+                  }}
+                >
+                  47
+                </div>
+                <div className="text-white font-bold text-xl mb-3 group-hover:text-blue-300 transition-colors duration-300">Countries</div>
+                <div className="text-gray-300 text-sm leading-relaxed">Global sourcing network with established supplier relationships and regulatory compliance</div>
+                <div className="mt-6 h-1.5 w-16 mx-auto bg-gradient-to-r from-blue-400 to-cyan-500 rounded-full group-hover:w-24 group-hover:h-2 transition-all duration-500 shadow-lg shadow-blue-500/50"></div>
+              </div>
             </div>
-            <div className="text-center p-8 bg-white rounded-lg shadow-lg border-l-4 border-purple-600">
-              <div className="text-5xl font-bold text-purple-600 mb-3">850+</div>
-              <div className="text-gray-900 font-bold text-xl mb-2">Projects Completed</div>
-              <div className="text-gray-600 text-sm">Successful enterprise deployments from startups to Fortune 500 with 95% success rate</div>
+            
+            <div className="group relative text-center p-10 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-2xl border border-white/20 rounded-3xl hover:bg-white/15 transform hover:scale-105 hover:-translate-y-2 transition-all duration-500 overflow-hidden">
+              <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-purple-400/30 to-pink-500/30 rounded-full blur-2xl group-hover:w-32 group-hover:h-32 transition-all duration-500"></div>
+              <div className="relative z-10">
+                <div 
+                  className="text-5xl md:text-6xl font-black bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent mb-4 group-hover:scale-110 transition-transform duration-500"
+                  style={{
+                    background: 'linear-gradient(135deg, #a855f7 0%, #ec4899 100%)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    textShadow: '0 4px 20px rgba(168, 85, 247, 0.3)'
+                  }}
+                >
+                  850+
+                </div>
+                <div className="text-white font-bold text-xl mb-3 group-hover:text-purple-300 transition-colors duration-300">Projects Completed</div>
+                <div className="text-gray-300 text-sm leading-relaxed">Successful enterprise deployments from startups to Fortune 500 with 95% success rate</div>
+                <div className="mt-6 h-1.5 w-16 mx-auto bg-gradient-to-r from-purple-400 to-pink-500 rounded-full group-hover:w-24 group-hover:h-2 transition-all duration-500 shadow-lg shadow-purple-500/50"></div>
+              </div>
             </div>
-            <div className="text-center p-8 bg-white rounded-lg shadow-lg border-l-4 border-red-600">
-              <div className="text-5xl font-bold text-red-600 mb-3">14</div>
-              <div className="text-gray-900 font-bold text-xl mb-2">Days Average</div>
-              <div className="text-gray-600 text-sm">Median emergency procurement completion time vs 18-24 weeks traditional channels</div>
+            
+            <div className="group relative text-center p-10 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-2xl border border-white/20 rounded-3xl hover:bg-white/15 transform hover:scale-105 hover:-translate-y-2 transition-all duration-500 overflow-hidden">
+              <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-red-400/30 to-orange-500/30 rounded-full blur-2xl group-hover:w-32 group-hover:h-32 transition-all duration-500"></div>
+              <div className="relative z-10">
+                <div 
+                  className="text-5xl md:text-6xl font-black bg-gradient-to-r from-red-400 to-orange-500 bg-clip-text text-transparent mb-4 group-hover:scale-110 transition-transform duration-500"
+                  style={{
+                    background: 'linear-gradient(135deg, #f87171 0%, #f97316 100%)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    textShadow: '0 4px 20px rgba(248, 113, 113, 0.3)'
+                  }}
+                >
+                  14
+                </div>
+                <div className="text-white font-bold text-xl mb-3 group-hover:text-red-300 transition-colors duration-300">Days Average</div>
+                <div className="text-gray-300 text-sm leading-relaxed">Median emergency procurement completion time vs 18-24 weeks traditional channels</div>
+                <div className="mt-6 h-1.5 w-16 mx-auto bg-gradient-to-r from-red-400 to-orange-500 rounded-full group-hover:w-24 group-hover:h-2 transition-all duration-500 shadow-lg shadow-red-500/50"></div>
+              </div>
             </div>
           </div>
           
