@@ -55,6 +55,14 @@ const config = {
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
       },
+      maxWidth: {
+        '8xl': '88rem',
+        '9xl': '96rem'
+      },
+      gridTemplateColumns: {
+        '16': 'repeat(16, minmax(0, 1fr))',
+        '20': 'repeat(20, minmax(0, 1fr))'
+      },
       animation: {
         'gradient-x': 'gradient-x 15s ease infinite',
         'shimmer': 'shimmer 2s linear infinite',

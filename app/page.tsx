@@ -99,15 +99,34 @@ export default function Home() {
             <span className="text-green-300 font-medium text-sm tracking-wide">⚡ GLOBAL HARDWARE NETWORK ACTIVE</span>
           </div>
 
-          {/* Main Headline with Custom Typography */}
-          <h1 className="relative">
-            <span className="block text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-black leading-[0.9] tracking-tight mb-6">
-              <span className="bg-gradient-to-r from-white via-gray-100 to-white bg-clip-text text-transparent block">
+          {/* Main Headline with Ultra-Impact Typography */}
+          <h1 className="relative"
+            style={{textShadow: '0 8px 32px rgba(0,0,0,0.5)'}}
+          >
+            <span className="block text-7xl md:text-8xl lg:text-9xl font-black leading-[0.85] tracking-tight mb-8">
+              <span 
+                className="bg-gradient-to-r from-white via-blue-50 to-gray-100 bg-clip-text text-transparent block transform hover:scale-105 transition-transform duration-700"
+                style={{
+                  background: 'linear-gradient(90deg, #ffffff 0%, #f0f9ff 30%, #f1f5f9 70%, #ffffff 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text'
+                }}
+              >
                 AI Hardware
               </span>
-              <span className="bg-gradient-to-r from-green-400 via-emerald-500 to-green-600 bg-clip-text text-transparent block relative">
+              <span 
+                className="bg-gradient-to-r from-green-400 via-emerald-400 to-green-500 bg-clip-text text-transparent block relative transform hover:scale-105 transition-transform duration-700"
+                style={{
+                  background: 'linear-gradient(90deg, #4ade80 0%, #10b981 50%, #059669 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text'
+                }}
+              >
                 Specialists
-                <div className="absolute -top-4 -right-8 w-20 h-20 bg-gradient-to-br from-green-400/20 to-emerald-500/20 rounded-full blur-xl animate-pulse"></div>
+                <div className="absolute -top-6 -right-12 w-32 h-32 bg-gradient-to-br from-green-400/30 to-emerald-500/30 rounded-full blur-3xl animate-pulse"></div>
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-green-400 rounded-full animate-ping"></div>
               </span>
             </span>
           </h1>
@@ -119,46 +138,104 @@ export default function Home() {
             <span className="text-emerald-400">25+ years global experience.</span> <span className="text-cyan-400">$2.4B+ sourced.</span> <span className="text-white font-medium">Zero upfront risk.</span>
           </p>
 
-          {/* CTA Buttons with Advanced Styling */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-20">
-            <Link href="/contact" className="group relative">
-              <div className="absolute -inset-1 bg-gradient-to-r from-green-400 via-emerald-500 to-green-600 rounded-2xl blur opacity-75 group-hover:opacity-100 transition duration-300"></div>
-              <div className="relative bg-gradient-to-r from-green-500 to-emerald-600 px-10 py-5 rounded-2xl font-bold text-lg text-white shadow-xl transform group-hover:scale-105 transition-all duration-300">
-                Start Emergency Procurement
-                <div className="absolute top-0 left-0 w-full h-full bg-white/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          {/* CTA Buttons with Ultra-Premium Styling */}
+          <div className="flex flex-col sm:flex-row gap-8 justify-center mb-24">
+            <Link href="/contact" className="group relative transform hover:scale-110 transition-all duration-500">
+              <div className="absolute -inset-2 bg-gradient-to-r from-green-400 via-emerald-400 to-green-500 rounded-3xl blur-lg opacity-60 group-hover:opacity-100 group-hover:blur-xl transition-all duration-500"></div>
+              <div 
+                className="relative bg-gradient-to-r from-green-500 to-emerald-600 px-12 py-6 rounded-3xl font-black text-xl text-white shadow-2xl"
+                style={{
+                  background: 'linear-gradient(135deg, #10b981 0%, #059669 50%, #047857 100%)',
+                  boxShadow: '0 20px 40px rgba(16, 185, 129, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.1) inset'
+                }}
+              >
+                <span className="relative z-10 flex items-center gap-3">
+                  Start Emergency Procurement
+                  <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+                </span>
+                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-white/20 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute -top-1 -left-1 w-4 h-4 bg-green-300 rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping transition-opacity duration-300"></div>
               </div>
             </Link>
             
-            <Link href="/tools/commission-calculator" className="group relative px-10 py-5 border-2 border-green-500/50 bg-green-500/10 backdrop-blur-xl text-green-300 font-bold text-lg rounded-2xl hover:border-green-400 hover:bg-green-500/20 hover:text-green-200 transform group-hover:scale-105 transition-all duration-300">
-              Calculate Your Savings
-              <div className="absolute inset-0 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <Link href="/tools/commission-calculator" className="group relative transform hover:scale-110 transition-all duration-500">
+              <div className="absolute -inset-1 bg-gradient-to-r from-green-500/50 to-emerald-500/50 rounded-3xl blur opacity-0 group-hover:opacity-100 group-hover:blur-lg transition-all duration-500"></div>
+              <div 
+                className="relative px-12 py-6 border-2 border-green-500/60 bg-gradient-to-br from-green-500/10 to-emerald-500/10 backdrop-blur-xl text-green-300 font-black text-xl rounded-3xl"
+                style={{
+                  backdropFilter: 'blur(20px)',
+                  border: '2px solid rgba(16, 185, 129, 0.3)',
+                  background: 'linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(5, 150, 105, 0.1) 100%)'
+                }}
+              >
+                <span className="relative z-10 flex items-center gap-3 group-hover:text-green-200 transition-colors duration-300">
+                  Calculate Your Savings
+                  <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </span>
+                <div className="absolute inset-0 bg-gradient-to-r from-green-400/20 to-emerald-400/20 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </div>
             </Link>
           </div>
 
-          {/* Trust Metrics with Visual Impact */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="group text-center p-8 bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl hover:bg-white/10 transition-all duration-300">
-              <div className="text-5xl font-black bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform duration-300">
-                $2.4B+
+          {/* Trust Metrics with Ultra-Premium Visual Impact */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+            <div className="group relative text-center p-10 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-2xl border border-white/20 rounded-3xl hover:bg-white/15 transform hover:scale-105 hover:-translate-y-2 transition-all duration-500 overflow-hidden">
+              <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-green-400/30 to-emerald-500/30 rounded-full blur-2xl group-hover:w-32 group-hover:h-32 transition-all duration-500"></div>
+              <div className="relative z-10">
+                <div 
+                  className="text-6xl font-black bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent mb-4 group-hover:scale-110 transition-transform duration-500"
+                  style={{
+                    background: 'linear-gradient(135deg, #4ade80 0%, #10b981 100%)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    textShadow: '0 4px 20px rgba(16, 185, 129, 0.3)'
+                  }}
+                >
+                  $2.4B+
+                </div>
+                <div className="text-gray-300 font-semibold tracking-wide text-lg group-hover:text-white transition-colors duration-300">Hardware Sourced</div>
+                <div className="mt-6 h-1.5 w-16 mx-auto bg-gradient-to-r from-green-400 to-emerald-500 rounded-full group-hover:w-24 group-hover:h-2 transition-all duration-500 shadow-lg shadow-green-500/50"></div>
               </div>
-              <div className="text-gray-400 font-medium tracking-wide">Hardware Sourced</div>
-              <div className="mt-4 h-1 w-12 mx-auto bg-gradient-to-r from-green-400 to-emerald-500 rounded-full group-hover:w-20 transition-all duration-300"></div>
             </div>
             
-            <div className="group text-center p-8 bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl hover:bg-white/10 transition-all duration-300">
-              <div className="text-5xl font-black bg-gradient-to-r from-emerald-400 to-cyan-500 bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform duration-300">
-                47
+            <div className="group relative text-center p-10 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-2xl border border-white/20 rounded-3xl hover:bg-white/15 transform hover:scale-105 hover:-translate-y-2 transition-all duration-500 overflow-hidden">
+              <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-emerald-400/30 to-cyan-500/30 rounded-full blur-2xl group-hover:w-32 group-hover:h-32 transition-all duration-500"></div>
+              <div className="relative z-10">
+                <div 
+                  className="text-6xl font-black bg-gradient-to-r from-emerald-400 to-cyan-500 bg-clip-text text-transparent mb-4 group-hover:scale-110 transition-transform duration-500"
+                  style={{
+                    background: 'linear-gradient(135deg, #34d399 0%, #22d3ee 100%)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    textShadow: '0 4px 20px rgba(52, 211, 153, 0.3)'
+                  }}
+                >
+                  47
+                </div>
+                <div className="text-gray-300 font-semibold tracking-wide text-lg group-hover:text-white transition-colors duration-300">Countries</div>
+                <div className="mt-6 h-1.5 w-16 mx-auto bg-gradient-to-r from-emerald-400 to-cyan-500 rounded-full group-hover:w-24 group-hover:h-2 transition-all duration-500 shadow-lg shadow-emerald-500/50"></div>
               </div>
-              <div className="text-gray-400 font-medium tracking-wide">Countries</div>
-              <div className="mt-4 h-1 w-12 mx-auto bg-gradient-to-r from-emerald-400 to-cyan-500 rounded-full group-hover:w-20 transition-all duration-300"></div>
             </div>
             
-            <div className="group text-center p-8 bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl hover:bg-white/10 transition-all duration-300">
-              <div className="text-5xl font-black bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform duration-300">
-                25+
+            <div className="group relative text-center p-10 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-2xl border border-white/20 rounded-3xl hover:bg-white/15 transform hover:scale-105 hover:-translate-y-2 transition-all duration-500 overflow-hidden">
+              <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-cyan-400/30 to-blue-500/30 rounded-full blur-2xl group-hover:w-32 group-hover:h-32 transition-all duration-500"></div>
+              <div className="relative z-10">
+                <div 
+                  className="text-6xl font-black bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-4 group-hover:scale-110 transition-transform duration-500"
+                  style={{
+                    background: 'linear-gradient(135deg, #22d3ee 0%, #3b82f6 100%)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    textShadow: '0 4px 20px rgba(34, 211, 238, 0.3)'
+                  }}
+                >
+                  25+
+                </div>
+                <div className="text-gray-300 font-semibold tracking-wide text-lg group-hover:text-white transition-colors duration-300">Years Experience</div>
+                <div className="mt-6 h-1.5 w-16 mx-auto bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full group-hover:w-24 group-hover:h-2 transition-all duration-500 shadow-lg shadow-cyan-500/50"></div>
               </div>
-              <div className="text-gray-400 font-medium tracking-wide">Years Experience</div>
-              <div className="mt-4 h-1 w-12 mx-auto bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full group-hover:w-20 transition-all duration-300"></div>
             </div>
           </div>
         </div>
@@ -260,52 +337,85 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="group relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/20 rounded-3xl p-8 hover:bg-white/15 transition-all duration-500 overflow-hidden">
-              <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-green-400/20 to-emerald-500/20 rounded-full blur-2xl group-hover:w-32 group-hover:h-32 transition-all duration-500"></div>
+          <div className="grid md:grid-cols-3 gap-12">
+            <div className="group relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-2xl border border-white/20 rounded-3xl p-10 hover:bg-white/15 transform hover:scale-105 hover:-translate-y-3 transition-all duration-700 overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-green-400/30 to-emerald-500/30 rounded-full blur-3xl group-hover:w-40 group-hover:h-40 transition-all duration-700"></div>
+              <div className="absolute -bottom-10 -left-10 w-20 h-20 bg-gradient-to-br from-green-500/20 to-emerald-600/20 rounded-full blur-2xl group-hover:w-28 group-hover:h-28 transition-all duration-700"></div>
               <div className="relative z-10">
-                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-3xl flex items-center justify-center mb-8 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
-                  <div className="w-8 h-8 bg-white rounded-xl"></div>
+                <div 
+                  className="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-600 rounded-3xl flex items-center justify-center mb-8 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 shadow-2xl shadow-green-500/40"
+                  style={{
+                    background: 'linear-gradient(135deg, #10b981 0%, #059669 100%)',
+                    boxShadow: '0 20px 40px rgba(16, 185, 129, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.1) inset'
+                  }}
+                >
+                  <div className="w-10 h-10 bg-white rounded-2xl opacity-90"></div>
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-green-300 transition-colors duration-300">
+                <h3 className="text-3xl font-black text-white mb-6 group-hover:text-green-300 transition-colors duration-300">
                   GPU Procurement
                 </h3>
-                <p className="text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors duration-300">
+                <p className="text-gray-300 leading-relaxed text-lg group-hover:text-gray-200 transition-colors duration-300">
                   NVIDIA H100, A100, and enterprise GPUs sourced through our global network. 
                   Faster delivery times at competitive prices.
                 </p>
+                <div className="mt-8 flex items-center gap-3 text-green-400 group-hover:text-green-300 transition-colors duration-300">
+                  <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                  <span className="font-semibold">Available Now</span>
+                </div>
               </div>
             </div>
 
-            <div className="group relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/20 rounded-3xl p-8 hover:bg-white/15 transition-all duration-500 overflow-hidden">
-              <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-emerald-400/20 to-cyan-500/20 rounded-full blur-2xl group-hover:w-32 group-hover:h-32 transition-all duration-500"></div>
+            <div className="group relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-2xl border border-white/20 rounded-3xl p-10 hover:bg-white/15 transform hover:scale-105 hover:-translate-y-3 transition-all duration-700 overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-emerald-400/30 to-cyan-500/30 rounded-full blur-3xl group-hover:w-40 group-hover:h-40 transition-all duration-700"></div>
+              <div className="absolute -bottom-10 -left-10 w-20 h-20 bg-gradient-to-br from-emerald-500/20 to-cyan-600/20 rounded-full blur-2xl group-hover:w-28 group-hover:h-28 transition-all duration-700"></div>
               <div className="relative z-10">
-                <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-cyan-600 rounded-3xl flex items-center justify-center mb-8 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
-                  <div className="w-8 h-8 bg-white rounded-xl"></div>
+                <div 
+                  className="w-20 h-20 bg-gradient-to-br from-emerald-500 to-cyan-600 rounded-3xl flex items-center justify-center mb-8 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 shadow-2xl shadow-emerald-500/40"
+                  style={{
+                    background: 'linear-gradient(135deg, #10b981 0%, #06b6d4 100%)',
+                    boxShadow: '0 20px 40px rgba(16, 185, 129, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.1) inset'
+                  }}
+                >
+                  <div className="w-10 h-10 bg-white rounded-2xl opacity-90"></div>
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-emerald-300 transition-colors duration-300">
+                <h3 className="text-3xl font-black text-white mb-6 group-hover:text-emerald-300 transition-colors duration-300">
                   Geographic Arbitrage
                 </h3>
-                <p className="text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors duration-300">
+                <p className="text-gray-300 leading-relaxed text-lg group-hover:text-gray-200 transition-colors duration-300">
                   Strategic sourcing across 47 countries to find the best prices and 
                   availability for your specific requirements.
                 </p>
+                <div className="mt-8 flex items-center gap-3 text-emerald-400 group-hover:text-emerald-300 transition-colors duration-300">
+                  <div className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
+                  <span className="font-semibold">Global Network</span>
+                </div>
               </div>
             </div>
 
-            <div className="group relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/20 rounded-3xl p-8 hover:bg-white/15 transition-all duration-500 overflow-hidden">
-              <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-full blur-2xl group-hover:w-32 group-hover:h-32 transition-all duration-500"></div>
+            <div className="group relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-2xl border border-white/20 rounded-3xl p-10 hover:bg-white/15 transform hover:scale-105 hover:-translate-y-3 transition-all duration-700 overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-cyan-400/30 to-blue-500/30 rounded-full blur-3xl group-hover:w-40 group-hover:h-40 transition-all duration-700"></div>
+              <div className="absolute -bottom-10 -left-10 w-20 h-20 bg-gradient-to-br from-cyan-500/20 to-blue-600/20 rounded-full blur-2xl group-hover:w-28 group-hover:h-28 transition-all duration-700"></div>
               <div className="relative z-10">
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-3xl flex items-center justify-center mb-8 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
-                  <div className="w-8 h-8 bg-white rounded-xl"></div>
+                <div 
+                  className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-3xl flex items-center justify-center mb-8 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 shadow-2xl shadow-cyan-500/40"
+                  style={{
+                    background: 'linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%)',
+                    boxShadow: '0 20px 40px rgba(6, 182, 212, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.1) inset'
+                  }}
+                >
+                  <div className="w-10 h-10 bg-white rounded-2xl opacity-90"></div>
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-300 transition-colors duration-300">
+                <h3 className="text-3xl font-black text-white mb-6 group-hover:text-cyan-300 transition-colors duration-300">
                   Emergency Response
                 </h3>
-                <p className="text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors duration-300">
+                <p className="text-gray-300 leading-relaxed text-lg group-hover:text-gray-200 transition-colors duration-300">
                   24/7 crisis procurement for urgent hardware needs. 
                   Dedicated team for time-critical deployments.
                 </p>
+                <div className="mt-8 flex items-center gap-3 text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300">
+                  <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
+                  <span className="font-semibold">24/7 Active</span>
+                </div>
               </div>
             </div>
           </div>

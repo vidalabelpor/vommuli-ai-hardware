@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #000000;
+  --foreground: #ffffff;
 }
 
 @theme inline {
@@ -141,15 +141,4 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Force test styling */
-header {
-  background: #1e3a8a !important;
-  color: white !important;
-}
-
-.hero-test {
-  background: linear-gradient(135deg, #1e40af, #3730a3) !important;
-  color: white !important;
-  padding: 4rem 2rem !important;
-}
 /* Safelist deployment Fri Oct  3 21:43:29 EDT 2025 */
