@@ -5,6 +5,7 @@ const config: Config = {
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
+    './tailwind-classes.txt', // Class reference file for enhanced styling
   ],
   safelist: [
     // Enhanced gradient classes for visual components
