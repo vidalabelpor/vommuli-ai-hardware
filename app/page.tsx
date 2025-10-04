@@ -23,7 +23,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       {/* Enterprise Authority Hero Section */}
-      <header className="relative bg-blue-900 text-white overflow-hidden">
+      <header className="relative bg-blue-900 text-white overflow-hidden hero-test">
         {/* Dynamic Background Pattern */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>

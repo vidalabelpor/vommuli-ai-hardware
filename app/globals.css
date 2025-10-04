@@ -140,3 +140,15 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Force test styling */
+header {
+  background: #1e3a8a !important;
+  color: white !important;
+}
+
+.hero-test {
+  background: linear-gradient(135deg, #1e40af, #3730a3) !important;
+  color: white !important;
+  padding: 4rem 2rem !important;
+}
