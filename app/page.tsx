@@ -43,7 +43,7 @@ export default function Home() {
               <span className="text-white font-semibold">🚨 Emergency GPU Procurement Hotline: Available 24/7 for Critical AI Infrastructure</span>
             </div>
             
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black mb-8 leading-tight">
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black mb-8 leading-tight" style={{textShadow: '0 4px 8px rgba(0,0,0,0.3)'}}>
               <span className="bg-gradient-to-r from-white via-blue-100 to-blue-200 bg-clip-text text-transparent">
                 We get you AI hardware
               </span>
