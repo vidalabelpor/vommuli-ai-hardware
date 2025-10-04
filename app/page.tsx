@@ -23,7 +23,10 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       {/* Enterprise Authority Hero Section */}
-      <header className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white overflow-hidden">
+      <header className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white overflow-hidden" style={{
+        background: 'linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #312e81 100%)',
+        position: 'relative'
+      }}>
         {/* Dynamic Background Pattern */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
@@ -44,13 +47,29 @@ export default function Home() {
             </div>
             
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black mb-8 leading-tight" style={{textShadow: '0 4px 8px rgba(0,0,0,0.3)'}}>
-              <span className="bg-gradient-to-r from-white via-blue-100 to-blue-200 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-white via-blue-100 to-blue-200 bg-clip-text text-transparent" style={{
+                background: 'linear-gradient(90deg, #ffffff 0%, #dbeafe 50%, #bfdbfe 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text'
+              }}>
                 We get you AI hardware
               </span>
-              <span className="block bg-gradient-to-r from-blue-200 via-white to-blue-100 bg-clip-text text-transparent">
+              <span className="block bg-gradient-to-r from-blue-200 via-white to-blue-100 bg-clip-text text-transparent" style={{
+                background: 'linear-gradient(90deg, #bfdbfe 0%, #ffffff 50%, #dbeafe 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text'
+              }}>
                 faster than anyone else
               </span>
-              <span className="block text-4xl sm:text-5xl lg:text-6xl mt-4 bg-gradient-to-r from-emerald-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent font-extrabold">
+              <span className="block text-4xl sm:text-5xl lg:text-6xl mt-4 bg-gradient-to-r from-emerald-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent font-extrabold" style={{
+                background: 'linear-gradient(90deg, #34d399 0%, #22d3ee 50%, #60a5fa 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+                fontWeight: '800'
+              }}>
                 with zero upfront risk
               </span>
             </h1>
