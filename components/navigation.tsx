@@ -67,9 +67,6 @@ export default function Navigation() {
             <Link href="/about" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
               About
             </Link>
-            <Link href="/blog" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
-              Resources
-            </Link>
             <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors">
               Contact
             </Link>
@@ -109,8 +106,14 @@ export default function Navigation() {
               <Link href="/services/nvidia-h100" className="block px-6 py-2 text-sm text-gray-600 hover:text-blue-600">
                 NVIDIA H100 Procurement
               </Link>
+              <Link href="/services/nvidia-a100" className="block px-6 py-2 text-sm text-gray-600 hover:text-blue-600">
+                NVIDIA A100 Sourcing
+              </Link>
               <Link href="/services/geographic-arbitrage" className="block px-6 py-2 text-sm text-gray-600 hover:text-blue-600">
                 Geographic Arbitrage
+              </Link>
+              <Link href="/services/emergency-procurement" className="block px-6 py-2 text-sm text-gray-600 hover:text-blue-600">
+                Emergency Procurement
               </Link>
               <Link href="/tools" className="block px-3 py-2 text-gray-700 hover:text-blue-600 font-medium">
                 Tools
@@ -121,11 +124,11 @@ export default function Navigation() {
               <Link href="/tools/timeline-planner" className="block px-6 py-2 text-sm text-gray-600 hover:text-blue-600">
                 Timeline Planner
               </Link>
+              <Link href="/tools/supply-intelligence" className="block px-6 py-2 text-sm text-gray-600 hover:text-blue-600">
+                Supply Intelligence
+              </Link>
               <Link href="/about" className="block px-3 py-2 text-gray-700 hover:text-blue-600 font-medium">
                 About
-              </Link>
-              <Link href="/blog" className="block px-3 py-2 text-gray-700 hover:text-blue-600 font-medium">
-                Resources
               </Link>
               <Link href="/contact" className="block px-3 py-2 text-gray-700 hover:text-blue-600 font-medium">
                 Contact

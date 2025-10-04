@@ -23,59 +23,87 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       {/* Enterprise Authority Hero Section */}
-      <header className="bg-gradient-to-r from-blue-900 to-slate-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <header className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white overflow-hidden">
+        {/* Dynamic Background Pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+          <svg className="absolute inset-0 w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <defs>
+              <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+                <path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(59, 130, 246, 0.3)" strokeWidth="0.5"/>
+              </pattern>
+            </defs>
+            <rect width="100" height="100" fill="url(#grid)" />
+          </svg>
+        </div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
             {/* Emergency Contact Bar */}
             <div className="mb-6 p-3 bg-red-600 rounded-lg inline-block">
               <span className="text-white font-semibold">🚨 Emergency GPU Procurement Hotline: Available 24/7 for Critical AI Infrastructure</span>
             </div>
             
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
-              We get you AI hardware faster than anyone else
-              <span className="block text-blue-300 text-3xl sm:text-4xl lg:text-5xl mt-2">
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black mb-8 leading-tight">
+              <span className="bg-gradient-to-r from-white via-blue-100 to-blue-200 bg-clip-text text-transparent">
+                We get you AI hardware
+              </span>
+              <span className="block bg-gradient-to-r from-blue-200 via-white to-blue-100 bg-clip-text text-transparent">
+                faster than anyone else
+              </span>
+              <span className="block text-4xl sm:text-5xl lg:text-6xl mt-4 bg-gradient-to-r from-emerald-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent font-extrabold">
                 with zero upfront risk
               </span>
             </h1>
             
             {/* Enhanced Authority Subtitle */}
-            <p className="text-xl sm:text-2xl mb-6 text-blue-100 max-w-5xl mx-auto">
+            <p className="text-xl sm:text-2xl mb-8 text-slate-200 max-w-5xl mx-auto font-medium leading-relaxed">
               Commission-based GPU procurement specialists with <strong>25+ years global sourcing experience</strong>, 
               <strong>$2.4B+ total hardware sourced</strong> across <strong>47 countries</strong>, serving enterprise clients from startups to Fortune 500
             </p>
             
             {/* Market Crisis Context */}
-            <div className="bg-blue-800/50 p-6 rounded-lg mb-8 max-w-4xl mx-auto">
-              <p className="text-lg text-blue-100 mb-4">
+            <div className="relative bg-gradient-to-r from-red-900/30 via-red-800/20 to-orange-900/30 backdrop-blur-sm border border-red-500/30 p-8 rounded-2xl mb-10 max-w-4xl mx-auto shadow-2xl">
+              <div className="absolute inset-0 bg-gradient-to-r from-red-600/10 to-orange-600/10 rounded-2xl"></div>
+              <div className="relative">
+                <p className="text-lg text-red-100 mb-4 font-semibold">
                 <strong>GPU Shortage Crisis:</strong> Traditional procurement fails when NVIDIA allocation shortages create 60-100% MSRP premiums and 12-24 week delays that kill competitive AI initiatives
               </p>
-              <p className="text-blue-200">
-                <strong>Our Solution:</strong> Alternative allocation access + geographic arbitrage + crisis procurement methodology = 2-8 week delivery with 15-60% cost savings
-              </p>
+                <p className="text-orange-100 font-medium">
+                  <strong>Our Solution:</strong> Alternative allocation access + geographic arbitrage + crisis procurement methodology = 2-8 week delivery with 15-60% cost savings
+                </p>
+              </div>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <Link href="/contact" className="bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors text-center">
-                🚨 Schedule Emergency Procurement Consultation
+            <div className="flex flex-col sm:flex-row gap-6 justify-center mb-10">
+              <Link href="/contact" className="group relative overflow-hidden bg-gradient-to-r from-red-600 via-red-500 to-orange-500 hover:from-red-700 hover:via-red-600 hover:to-orange-600 text-white font-bold py-5 px-10 rounded-2xl text-lg transition-all duration-300 text-center shadow-2xl hover:shadow-red-500/50 transform hover:scale-105">
+                <span className="relative z-10">🚨 Schedule Emergency Procurement Consultation</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/10 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
               </Link>
-              <Link href="/tools/commission-calculator" className="border-2 border-blue-300 text-blue-300 hover:bg-blue-300 hover:text-blue-900 font-bold py-4 px-8 rounded-lg text-lg transition-colors text-center">
-                💰 Calculate Commission Savings vs Flat-Fee Consultants
+              <Link href="/tools/commission-calculator" className="group relative overflow-hidden border-2 border-cyan-400 bg-cyan-400/10 text-cyan-300 hover:bg-cyan-400 hover:text-slate-900 font-bold py-5 px-10 rounded-2xl text-lg transition-all duration-300 text-center backdrop-blur-sm hover:shadow-2xl hover:shadow-cyan-400/50 transform hover:scale-105">
+                <span className="relative z-10">💰 Calculate Commission Savings vs Flat-Fee Consultants</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/0 via-cyan-400/20 to-cyan-400/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
               </Link>
             </div>
             
             {/* Enhanced Trust Signals */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-blue-200 max-w-4xl mx-auto">
-              <div className="flex items-center justify-center gap-2">
-                <span className="text-green-400">✓</span>
-                <span>Success-based fees prove our confidence in delivery</span>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm max-w-5xl mx-auto">
+              <div className="group flex items-center justify-center gap-3 bg-white/5 backdrop-blur-sm border border-emerald-400/30 rounded-xl p-4 hover:bg-white/10 transition-all duration-300 hover:border-emerald-400/60">
+                <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-emerald-400 to-green-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-white font-bold text-sm">✓</span>
+                </div>
+                <span className="text-emerald-100 font-medium">Success-based fees prove our confidence in delivery</span>
               </div>
-              <div className="flex items-center justify-center gap-2">
-                <span className="text-green-400">✓</span>
-                <span>95% transaction success rate with enterprise clients</span>
+              <div className="group flex items-center justify-center gap-3 bg-white/5 backdrop-blur-sm border border-blue-400/30 rounded-xl p-4 hover:bg-white/10 transition-all duration-300 hover:border-blue-400/60">
+                <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-blue-400 to-cyan-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-white font-bold text-sm">✓</span>
+                </div>
+                <span className="text-blue-100 font-medium">95% transaction success rate with enterprise clients</span>
               </div>
-              <div className="flex items-center justify-center gap-2">
-                <span className="text-green-400">✓</span>
-                <span>Professional liability insurance & business credentials</span>
+              <div className="group flex items-center justify-center gap-3 bg-white/5 backdrop-blur-sm border border-purple-400/30 rounded-xl p-4 hover:bg-white/10 transition-all duration-300 hover:border-purple-400/60">
+                <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-purple-400 to-indigo-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-white font-bold text-sm">✓</span>
+                </div>
+                <span className="text-purple-100 font-medium">Professional liability insurance & business credentials</span>
               </div>
             </div>
           </div>
@@ -83,162 +111,251 @@ export default function Home() {
       </header>
 
       {/* Quantifiable Authority & Competitive Superiority */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              Why Fortune 500 CTOs Choose Commission-Based Over Traditional Procurement
+      <section className="relative py-24 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-30">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/5 to-purple-600/5"></div>
+          <svg className="absolute inset-0 w-full h-full" viewBox="0 0 60 60" preserveAspectRatio="none">
+            <defs>
+              <pattern id="dots" width="6" height="6" patternUnits="userSpaceOnUse">
+                <circle cx="3" cy="3" r="1" fill="rgba(59, 130, 246, 0.2)"/>
+              </pattern>
+            </defs>
+            <rect width="60" height="60" fill="url(#dots)" />
+          </svg>
+        </div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-20">
+            <div className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent text-sm font-bold tracking-wider uppercase mb-4">
+              Competitive Superiority Analysis
+            </div>
+            <h2 className="text-5xl sm:text-6xl font-black text-slate-900 mb-8 leading-tight">
+              <span className="bg-gradient-to-r from-slate-900 via-blue-900 to-purple-900 bg-clip-text text-transparent">
+                Why Fortune 500 CTOs Choose
+              </span>
+              <span className="block bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
+                Commission-Based Over Traditional
+              </span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-8">
-              While traditional flat-fee consultants charge upfront regardless of results, our success-only model with 25+ years global sourcing expertise delivers quantifiable enterprise advantages
+            <p className="text-xl text-slate-700 max-w-4xl mx-auto mb-12 leading-relaxed font-medium">
+              While traditional flat-fee consultants charge upfront regardless of results, our success-only model with <span className="text-blue-600 font-bold">25+ years global sourcing expertise</span> delivers quantifiable enterprise advantages
             </p>
             
             {/* Competitive Comparison Table */}
-            <div className="bg-white p-8 rounded-lg shadow-lg mb-12 max-w-5xl mx-auto">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Commission-Based vs Traditional Procurement Comparison</h3>
-              <div className="overflow-x-auto">
-                <table className="w-full text-left">
-                  <thead>
-                    <tr className="border-b-2 border-gray-200">
-                      <th className="py-3 px-4 font-semibold text-gray-700">Factor</th>
-                      <th className="py-3 px-4 font-semibold text-green-700">Vommuli Commission-Based</th>
-                      <th className="py-3 px-4 font-semibold text-red-700">Traditional Flat-Fee Consultants</th>
-                    </tr>
-                  </thead>
-                  <tbody className="text-sm">
-                    <tr className="border-b border-gray-100">
-                      <td className="py-3 px-4 font-medium">Upfront Risk</td>
-                      <td className="py-3 px-4 text-green-700">$0 - Success-only fees</td>
-                      <td className="py-3 px-4 text-red-700">$50K-$200K+ regardless of results</td>
-                    </tr>
-                    <tr className="border-b border-gray-100">
-                      <td className="py-3 px-4 font-medium">Delivery Speed</td>
-                      <td className="py-3 px-4 text-green-700">2-8 weeks (crisis procurement)</td>
-                      <td className="py-3 px-4 text-red-700">12-24 weeks (traditional channels)</td>
-                    </tr>
-                    <tr className="border-b border-gray-100">
-                      <td className="py-3 px-4 font-medium">Geographic Reach</td>
-                      <td className="py-3 px-4 text-green-700">47 countries, $2.4B+ sourced</td>
-                      <td className="py-3 px-4 text-red-700">Limited to regional distributors</td>
-                    </tr>
-                    <tr className="border-b border-gray-100">
-                      <td className="py-3 px-4 font-medium">Success Incentive</td>
-                      <td className="py-3 px-4 text-green-700">95% completion rate (aligned incentives)</td>
-                      <td className="py-3 px-4 text-red-700">No completion guarantees</td>
-                    </tr>
-                    <tr>
-                      <td className="py-3 px-4 font-medium">Total Project Cost</td>
-                      <td className="py-3 px-4 text-green-700">20-40% lower with arbitrage savings</td>
-                      <td className="py-3 px-4 text-red-700">Full MSRP + consultant fees</td>
-                    </tr>
-                  </tbody>
-                </table>
+            <div className="relative bg-white/80 backdrop-blur-sm p-10 rounded-3xl shadow-2xl mb-16 max-w-6xl mx-auto border border-slate-200">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-purple-500/5 to-indigo-500/5 rounded-3xl"></div>
+              <div className="relative">
+                <h3 className="text-3xl font-black text-slate-900 mb-8 text-center">
+                  <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                    Commission-Based vs Traditional Procurement
+                  </span>
+                </h3>
+                <div className="overflow-x-auto">
+                  <table className="w-full text-left">
+                    <thead>
+                      <tr className="border-b-2 border-slate-300">
+                        <th className="py-4 px-6 font-black text-slate-800 text-lg">Factor</th>
+                        <th className="py-4 px-6 font-black text-emerald-700 text-lg bg-gradient-to-r from-emerald-50 to-green-50 rounded-l-xl">Vommuli Commission-Based</th>
+                        <th className="py-4 px-6 font-black text-red-700 text-lg bg-gradient-to-r from-red-50 to-rose-50 rounded-r-xl">Traditional Flat-Fee Consultants</th>
+                      </tr>
+                    </thead>
+                    <tbody className="text-base">
+                      <tr className="border-b border-slate-200 hover:bg-slate-50/50 transition-colors">
+                        <td className="py-4 px-6 font-bold text-slate-800">Upfront Risk</td>
+                        <td className="py-4 px-6 text-emerald-700 font-semibold bg-emerald-50/50">$0 - Success-only fees</td>
+                        <td className="py-4 px-6 text-red-700 font-semibold bg-red-50/50">$50K-$200K+ regardless of results</td>
+                      </tr>
+                      <tr className="border-b border-slate-200 hover:bg-slate-50/50 transition-colors">
+                        <td className="py-4 px-6 font-bold text-slate-800">Delivery Speed</td>
+                        <td className="py-4 px-6 text-emerald-700 font-semibold bg-emerald-50/50">2-8 weeks (crisis procurement)</td>
+                        <td className="py-4 px-6 text-red-700 font-semibold bg-red-50/50">12-24 weeks (traditional channels)</td>
+                      </tr>
+                      <tr className="border-b border-slate-200 hover:bg-slate-50/50 transition-colors">
+                        <td className="py-4 px-6 font-bold text-slate-800">Geographic Reach</td>
+                        <td className="py-4 px-6 text-emerald-700 font-semibold bg-emerald-50/50">47 countries, $2.4B+ sourced</td>
+                        <td className="py-4 px-6 text-red-700 font-semibold bg-red-50/50">Limited to regional distributors</td>
+                      </tr>
+                      <tr className="border-b border-slate-200 hover:bg-slate-50/50 transition-colors">
+                        <td className="py-4 px-6 font-bold text-slate-800">Success Incentive</td>
+                        <td className="py-4 px-6 text-emerald-700 font-semibold bg-emerald-50/50">95% completion rate (aligned incentives)</td>
+                        <td className="py-4 px-6 text-red-700 font-semibold bg-red-50/50">No completion guarantees</td>
+                      </tr>
+                      <tr className="hover:bg-slate-50/50 transition-colors">
+                        <td className="py-4 px-6 font-bold text-slate-800">Total Project Cost</td>
+                        <td className="py-4 px-6 text-emerald-700 font-semibold bg-emerald-50/50">20-40% lower with arbitrage savings</td>
+                        <td className="py-4 px-6 text-red-700 font-semibold bg-red-50/50">Full MSRP + consultant fees</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
           </div>
           
           {/* Enhanced Metrics Grid */}
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <div className="text-center p-8 bg-white rounded-lg shadow-lg border-l-4 border-green-500">
-              <div className="text-4xl font-bold text-green-600 mb-3">$2.4B+</div>
-              <div className="text-gray-900 font-bold text-xl mb-3">Total Hardware Sourced</div>
-              <div className="text-gray-600">Across 850+ enterprise projects spanning AI startups to Fortune 500 infrastructure</div>
+          <div className="grid md:grid-cols-3 gap-10 mb-16">
+            <div className="group relative text-center p-10 bg-white/90 backdrop-blur-sm rounded-3xl shadow-2xl border border-emerald-200 hover:border-emerald-400 transition-all duration-500 hover:shadow-emerald-500/20 hover:-translate-y-2">
+              <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 via-green-500/5 to-emerald-600/5 rounded-3xl"></div>
+              <div className="relative">
+                <div className="text-6xl font-black bg-gradient-to-r from-emerald-600 via-green-500 to-emerald-700 bg-clip-text text-transparent mb-4 group-hover:scale-110 transition-transform duration-300">$2.4B+</div>
+                <div className="text-slate-900 font-bold text-2xl mb-4">Total Hardware Sourced</div>
+                <div className="text-slate-600 leading-relaxed">Across 850+ enterprise projects spanning AI startups to Fortune 500 infrastructure</div>
+              </div>
             </div>
-            <div className="text-center p-8 bg-white rounded-lg shadow-lg border-l-4 border-blue-500">
-              <div className="text-4xl font-bold text-blue-600 mb-3">47</div>
-              <div className="text-gray-900 font-bold text-xl mb-3">Countries in Network</div>
-              <div className="text-gray-600">Global supplier relationships enabling alternative allocation access and geographic arbitrage</div>
+            <div className="group relative text-center p-10 bg-white/90 backdrop-blur-sm rounded-3xl shadow-2xl border border-blue-200 hover:border-blue-400 transition-all duration-500 hover:shadow-blue-500/20 hover:-translate-y-2">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-cyan-500/5 to-blue-600/5 rounded-3xl"></div>
+              <div className="relative">
+                <div className="text-6xl font-black bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-700 bg-clip-text text-transparent mb-4 group-hover:scale-110 transition-transform duration-300">47</div>
+                <div className="text-slate-900 font-bold text-2xl mb-4">Countries in Network</div>
+                <div className="text-slate-600 leading-relaxed">Global supplier relationships enabling alternative allocation access and geographic arbitrage</div>
+              </div>
             </div>
-            <div className="text-center p-8 bg-white rounded-lg shadow-lg border-l-4 border-red-500">
-              <div className="text-4xl font-bold text-red-600 mb-3">95%</div>
-              <div className="text-gray-900 font-bold text-xl mb-3">Success Rate</div>
-              <div className="text-gray-600">Transaction completion rate for qualified enterprise prospects with performance guarantees</div>
+            <div className="group relative text-center p-10 bg-white/90 backdrop-blur-sm rounded-3xl shadow-2xl border border-red-200 hover:border-red-400 transition-all duration-500 hover:shadow-red-500/20 hover:-translate-y-2">
+              <div className="absolute inset-0 bg-gradient-to-br from-red-500/5 via-rose-500/5 to-red-600/5 rounded-3xl"></div>
+              <div className="relative">
+                <div className="text-6xl font-black bg-gradient-to-r from-red-600 via-rose-500 to-red-700 bg-clip-text text-transparent mb-4 group-hover:scale-110 transition-transform duration-300">95%</div>
+                <div className="text-slate-900 font-bold text-2xl mb-4">Success Rate</div>
+                <div className="text-slate-600 leading-relaxed">Transaction completion rate for qualified enterprise prospects with performance guarantees</div>
+              </div>
             </div>
           </div>
           
           {/* Speed & Cost Advantage Details */}
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-blue-50 p-8 rounded-lg">
-              <h3 className="text-2xl font-bold text-blue-900 mb-4">🚀 Speed Methodology: 2-8 Week Delivery</h3>
-              <ul className="space-y-3 text-blue-800">
-                <li className="flex items-start gap-3">
-                  <span className="text-green-500 font-bold">✓</span>
-                  <span><strong>Alternative Allocation Access:</strong> NVIDIA-independent channels via Asian suppliers (Moore Threads, VastaiTech)</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-green-500 font-bold">✓</span>
-                  <span><strong>Geographic Arbitrage:</strong> US-LATAM-Asia sourcing optimization for fastest availability</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-green-500 font-bold">✓</span>
-                  <span><strong>Crisis Procurement Protocols:</strong> Emergency inventory identification and expedited customs clearance</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-green-500 font-bold">✓</span>
-                  <span><strong>Pre-negotiated Contracts:</strong> Standing agreements with 15+ major distributors for immediate execution</span>
-                </li>
-              </ul>
+          <div className="grid md:grid-cols-2 gap-12">
+            <div className="group relative bg-gradient-to-br from-blue-50 via-cyan-50 to-blue-100 p-10 rounded-3xl shadow-2xl border border-blue-200 hover:border-blue-400 transition-all duration-500 hover:shadow-blue-500/30 hover:-translate-y-1">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-cyan-500/5 rounded-3xl"></div>
+              <div className="relative">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="text-4xl">🚀</div>
+                  <h3 className="text-3xl font-black bg-gradient-to-r from-blue-900 to-cyan-900 bg-clip-text text-transparent">Speed Methodology: 2-8 Week Delivery</h3>
+                </div>
+                <ul className="space-y-4 text-blue-900">
+                  <li className="group/item flex items-start gap-4 p-4 rounded-xl hover:bg-white/60 transition-all duration-300">
+                    <div className="flex-shrink-0 w-6 h-6 bg-gradient-to-r from-emerald-500 to-green-600 rounded-full flex items-center justify-center group-hover/item:scale-110 transition-transform duration-300">
+                      <span className="text-white font-bold text-sm">✓</span>
+                    </div>
+                    <span className="font-medium"><strong className="text-blue-800">Alternative Allocation Access:</strong> NVIDIA-independent channels via Asian suppliers (Moore Threads, VastaiTech)</span>
+                  </li>
+                  <li className="group/item flex items-start gap-4 p-4 rounded-xl hover:bg-white/60 transition-all duration-300">
+                    <div className="flex-shrink-0 w-6 h-6 bg-gradient-to-r from-emerald-500 to-green-600 rounded-full flex items-center justify-center group-hover/item:scale-110 transition-transform duration-300">
+                      <span className="text-white font-bold text-sm">✓</span>
+                    </div>
+                    <span className="font-medium"><strong className="text-blue-800">Geographic Arbitrage:</strong> US-LATAM-Asia sourcing optimization for fastest availability</span>
+                  </li>
+                  <li className="group/item flex items-start gap-4 p-4 rounded-xl hover:bg-white/60 transition-all duration-300">
+                    <div className="flex-shrink-0 w-6 h-6 bg-gradient-to-r from-emerald-500 to-green-600 rounded-full flex items-center justify-center group-hover/item:scale-110 transition-transform duration-300">
+                      <span className="text-white font-bold text-sm">✓</span>
+                    </div>
+                    <span className="font-medium"><strong className="text-blue-800">Crisis Procurement Protocols:</strong> Emergency inventory identification and expedited customs clearance</span>
+                  </li>
+                  <li className="group/item flex items-start gap-4 p-4 rounded-xl hover:bg-white/60 transition-all duration-300">
+                    <div className="flex-shrink-0 w-6 h-6 bg-gradient-to-r from-emerald-500 to-green-600 rounded-full flex items-center justify-center group-hover/item:scale-110 transition-transform duration-300">
+                      <span className="text-white font-bold text-sm">✓</span>
+                    </div>
+                    <span className="font-medium"><strong className="text-blue-800">Pre-negotiated Contracts:</strong> Standing agreements with 15+ major distributors for immediate execution</span>
+                  </li>
+                </ul>
+              </div>
             </div>
             
-            <div className="bg-green-50 p-8 rounded-lg">
-              <h3 className="text-2xl font-bold text-green-900 mb-4">💰 Cost Optimization: 15-60% Savings</h3>
-              <ul className="space-y-3 text-green-800">
-                <li className="flex items-start gap-3">
-                  <span className="text-blue-500 font-bold">✓</span>
-                  <span><strong>Commission vs Flat Fees:</strong> Save $50K-$200K+ in upfront consultant costs</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-blue-500 font-bold">✓</span>
-                  <span><strong>Geographic Price Arbitrage:</strong> 15-60% hardware cost savings via optimal sourcing geography</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-blue-500 font-bold">✓</span>
-                  <span><strong>Volume Aggregation:</strong> Bulk purchasing power across enterprise client base</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-blue-500 font-bold">✓</span>
-                  <span><strong>Opportunity Cost Elimination:</strong> Prevent $1M-$10M+ in delayed AI initiative revenue</span>
-                </li>
-              </ul>
+            <div className="group relative bg-gradient-to-br from-green-50 via-emerald-50 to-green-100 p-10 rounded-3xl shadow-2xl border border-green-200 hover:border-green-400 transition-all duration-500 hover:shadow-green-500/30 hover:-translate-y-1">
+              <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 to-emerald-500/5 rounded-3xl"></div>
+              <div className="relative">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="text-4xl">💰</div>
+                  <h3 className="text-3xl font-black bg-gradient-to-r from-green-900 to-emerald-900 bg-clip-text text-transparent">Cost Optimization: 15-60% Savings</h3>
+                </div>
+                <ul className="space-y-4 text-green-900">
+                  <li className="group/item flex items-start gap-4 p-4 rounded-xl hover:bg-white/60 transition-all duration-300">
+                    <div className="flex-shrink-0 w-6 h-6 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-full flex items-center justify-center group-hover/item:scale-110 transition-transform duration-300">
+                      <span className="text-white font-bold text-sm">✓</span>
+                    </div>
+                    <span className="font-medium"><strong className="text-green-800">Commission vs Flat Fees:</strong> Save $50K-$200K+ in upfront consultant costs</span>
+                  </li>
+                  <li className="group/item flex items-start gap-4 p-4 rounded-xl hover:bg-white/60 transition-all duration-300">
+                    <div className="flex-shrink-0 w-6 h-6 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-full flex items-center justify-center group-hover/item:scale-110 transition-transform duration-300">
+                      <span className="text-white font-bold text-sm">✓</span>
+                    </div>
+                    <span className="font-medium"><strong className="text-green-800">Geographic Price Arbitrage:</strong> 15-60% hardware cost savings via optimal sourcing geography</span>
+                  </li>
+                  <li className="group/item flex items-start gap-4 p-4 rounded-xl hover:bg-white/60 transition-all duration-300">
+                    <div className="flex-shrink-0 w-6 h-6 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-full flex items-center justify-center group-hover/item:scale-110 transition-transform duration-300">
+                      <span className="text-white font-bold text-sm">✓</span>
+                    </div>
+                    <span className="font-medium"><strong className="text-green-800">Volume Aggregation:</strong> Bulk purchasing power across enterprise client base</span>
+                  </li>
+                  <li className="group/item flex items-start gap-4 p-4 rounded-xl hover:bg-white/60 transition-all duration-300">
+                    <div className="flex-shrink-0 w-6 h-6 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-full flex items-center justify-center group-hover/item:scale-110 transition-transform duration-300">
+                      <span className="text-white font-bold text-sm">✓</span>
+                    </div>
+                    <span className="font-medium"><strong className="text-green-800">Opportunity Cost Elimination:</strong> Prevent $1M-$10M+ in delayed AI initiative revenue</span>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Global AI Hardware Procurement Authority */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              The World's Most Comprehensive AI Hardware Sourcing Network
+      <section className="relative py-24 bg-white overflow-hidden">
+        {/* Subtle Background Pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <svg className="absolute inset-0 w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <defs>
+              <radialGradient id="radial" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stopColor="rgb(59, 130, 246)" stopOpacity="0.3"/>
+                <stop offset="100%" stopColor="rgb(59, 130, 246)" stopOpacity="0"/>
+              </radialGradient>
+            </defs>
+            <circle cx="20" cy="20" r="15" fill="url(#radial)"/>
+            <circle cx="80" cy="40" r="20" fill="url(#radial)"/>
+            <circle cx="60" cy="80" r="18" fill="url(#radial)"/>
+          </svg>
+        </div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-20">
+            <div className="inline-block bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent text-sm font-bold tracking-wider uppercase mb-4">
+              Global Sourcing Authority
+            </div>
+            <h2 className="text-5xl sm:text-6xl font-black text-slate-900 mb-8 leading-tight">
+              <span className="bg-gradient-to-r from-slate-900 via-blue-900 to-indigo-900 bg-clip-text text-transparent">
+                The World's Most Comprehensive
+              </span>
+              <span className="block bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
+                AI Hardware Sourcing Network
+              </span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-8">
-              25+ years building supplier relationships across 47 countries enables alternative allocation access when NVIDIA shortages threaten your AI initiatives. Our geographic arbitrage methodology delivers 15-60% savings while maintaining enterprise-grade supply chain security.
+            <p className="text-xl text-slate-700 max-w-4xl mx-auto mb-12 leading-relaxed font-medium">
+              <span className="text-blue-600 font-bold">25+ years</span> building supplier relationships across <span className="text-purple-600 font-bold">47 countries</span> enables alternative allocation access when NVIDIA shortages threaten your AI initiatives. Our geographic arbitrage methodology delivers <span className="text-emerald-600 font-bold">15-60% savings</span> while maintaining enterprise-grade supply chain security.
             </p>
             
             {/* Market Intelligence Dashboard */}
-            <div className="bg-gray-900 text-white p-8 rounded-lg mb-12">
-              <h3 className="text-2xl font-bold mb-6 text-center">Real-Time Market Intelligence & Sourcing Advantage</h3>
-              <div className="grid md:grid-cols-4 gap-6 text-center">
-                <div>
-                  <div className="text-3xl font-bold text-green-400 mb-2">$40K-$50K</div>
-                  <div className="text-sm text-gray-300">Current H100 Premium Pricing</div>
-                  <div className="text-xs text-gray-400">(vs $25K-$35K NVIDIA MSRP)</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-yellow-400 mb-2">12-24</div>
-                  <div className="text-sm text-gray-300">Weeks Traditional Lead Time</div>
-                  <div className="text-xs text-gray-400">(US authorized distributors)</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-blue-400 mb-2">26%</div>
-                  <div className="text-sm text-gray-300">Asia-US Price Arbitrage</div>
-                  <div className="text-xs text-gray-400">(Current opportunity)</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-red-400 mb-2">2-8</div>
-                  <div className="text-sm text-gray-300">Weeks Vommuli Delivery</div>
-                  <div className="text-xs text-gray-400">(Alternative allocation)</div>
+            <div className="relative bg-gradient-to-br from-slate-900 via-gray-900 to-slate-800 text-white p-12 rounded-3xl mb-16 shadow-2xl border border-slate-700">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 via-purple-600/10 to-indigo-600/10 rounded-3xl"></div>
+              <div className="relative">
+                <h3 className="text-3xl font-black mb-8 text-center bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">Real-Time Market Intelligence & Sourcing Advantage</h3>
+                <div className="grid md:grid-cols-4 gap-8 text-center">
+                  <div className="group p-4 rounded-2xl bg-white/5 hover:bg-white/10 transition-all duration-300 border border-emerald-500/30 hover:border-emerald-400">
+                    <div className="text-4xl font-black bg-gradient-to-r from-emerald-400 to-green-500 bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform duration-300">$40K-$50K</div>
+                    <div className="text-sm text-emerald-200 font-semibold">Current H100 Premium Pricing</div>
+                    <div className="text-xs text-emerald-300/70">(vs $25K-$35K NVIDIA MSRP)</div>
+                  </div>
+                  <div className="group p-4 rounded-2xl bg-white/5 hover:bg-white/10 transition-all duration-300 border border-yellow-500/30 hover:border-yellow-400">
+                    <div className="text-4xl font-black bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform duration-300">12-24</div>
+                    <div className="text-sm text-yellow-200 font-semibold">Weeks Traditional Lead Time</div>
+                    <div className="text-xs text-yellow-300/70">(US authorized distributors)</div>
+                  </div>
+                  <div className="group p-4 rounded-2xl bg-white/5 hover:bg-white/10 transition-all duration-300 border border-blue-500/30 hover:border-blue-400">
+                    <div className="text-4xl font-black bg-gradient-to-r from-blue-400 to-cyan-500 bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform duration-300">26%</div>
+                    <div className="text-sm text-blue-200 font-semibold">Asia-US Price Arbitrage</div>
+                    <div className="text-xs text-blue-300/70">(Current opportunity)</div>
+                  </div>
+                  <div className="group p-4 rounded-2xl bg-white/5 hover:bg-white/10 transition-all duration-300 border border-red-500/30 hover:border-red-400">
+                    <div className="text-4xl font-black bg-gradient-to-r from-red-400 to-orange-500 bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform duration-300">2-8</div>
+                    <div className="text-sm text-red-200 font-semibold">Weeks Vommuli Delivery</div>
+                    <div className="text-xs text-red-300/70">(Alternative allocation)</div>
+                  </div>
                 </div>
               </div>
             </div>
