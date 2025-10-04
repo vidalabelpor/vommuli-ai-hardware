@@ -19,81 +19,183 @@ export const metadata: Metadata = generateSEO({
 
 export default function NvidiaH100Page() {
   return (
-    <div className="min-h-screen bg-white">
-      {/* H100 Crisis & Authority Hero */}
-      <header className="bg-gradient-to-r from-green-900 to-blue-900 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            {/* H100 Shortage Crisis Alert */}
-            <div className="mb-6 p-4 bg-red-600 rounded-lg inline-block">
-              <span className="text-white font-bold">🚨 H100 Allocation Crisis: 60-100% MSRP Premiums, 12-24 Week Delays</span>
+    <div className="min-h-screen bg-black text-white">
+      {/* Hero Section with Visual Impact */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Animated Background Grid */}
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-900">
+          <div className="absolute inset-0 opacity-20">
+            <div className="grid grid-cols-8 md:grid-cols-12 lg:grid-cols-16 h-full w-full">
+              {Array.from({ length: 192 }).map((_, i) => (
+                <div 
+                  key={i} 
+                  className="border border-green-500/20 relative group"
+                  style={{
+                    animationDelay: `${Math.random() * 2}s`,
+                    animation: `pulse ${3 + Math.random() * 2}s ease-in-out infinite`
+                  }}
+                >
+                  {Math.random() > 0.95 && (
+                    <div className="absolute inset-0 bg-gradient-to-br from-green-400/20 to-emerald-500/20 animate-pulse"></div>
+                  )}
+                </div>
+              ))}
             </div>
-            
-            <h1 className="text-5xl sm:text-6xl font-bold mb-8">
-              NVIDIA H100 Procurement Mastery:
-              <span className="block text-green-300 text-4xl sm:text-5xl mt-2">
-                2-8 Week Delivery When Others Quote 6+ Months
+          </div>
+        </div>
+
+        {/* Floating Elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-gradient-to-br from-green-500/10 to-emerald-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute top-3/4 right-1/4 w-96 h-96 bg-gradient-to-br from-red-500/10 to-orange-500/10 rounded-full blur-3xl animate-pulse" style={{animationDelay: '1s'}}></div>
+        </div>
+
+        <div className="relative z-10 max-w-8xl mx-auto px-6 lg:px-12 text-center pt-20">
+          {/* Crisis Alert Badge */}
+          <div className="inline-flex items-center gap-3 bg-red-500/20 border border-red-500/40 backdrop-blur-xl px-8 py-4 rounded-full mb-12 animate-pulse">
+            <div className="w-3 h-3 bg-red-400 rounded-full animate-ping"></div>
+            <span className="text-red-300 font-bold text-sm tracking-wide">🚨 H100 ALLOCATION CRISIS: 60-100% MSRP PREMIUMS, 12-24 WEEK DELAYS</span>
+          </div>
+
+          {/* Main Headline with Ultra-Impact Typography */}
+          <h1 className="relative mb-12" style={{textShadow: '0 8px 32px rgba(0,0,0,0.5)'}}>
+            <span className="block text-5xl md:text-6xl lg:text-7xl font-black leading-[0.85] tracking-tight mb-4">
+              <span 
+                className="bg-gradient-to-r from-white via-blue-50 to-gray-100 bg-clip-text text-transparent block transform hover:scale-105 transition-transform duration-700"
+                style={{
+                  background: 'linear-gradient(90deg, #ffffff 0%, #f0f9ff 30%, #f1f5f9 70%, #ffffff 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text'
+                }}
+              >
+                NVIDIA H100
               </span>
-            </h1>
-            
-            <p className="text-xl text-green-100 max-w-5xl mx-auto mb-8">
-              When H100 allocation shortages create enterprise AI initiative delays costing $10M+ per quarter, traditional flat-fee consultants charge upfront while delivering no results. Our commission-based model provides alternative allocation access with 95% success rate - payment only on delivery.
-            </p>
-            
-            {/* H100 Market Crisis Stats */}
-            <div className="bg-green-800/50 p-6 rounded-lg mb-8 max-w-5xl mx-auto">
-              <h3 className="text-2xl font-bold text-green-300 mb-4">Current H100 Market Crisis Impact</h3>
-              <div className="grid md:grid-cols-4 gap-4 text-center">
-                <div>
-                  <div className="text-3xl font-bold text-red-400 mb-1">$40K-$50K</div>
-                  <div className="text-green-200 text-sm">Current Market Price</div>
-                  <div className="text-green-300 text-xs">(vs $25K-$35K MSRP)</div>
+              <span 
+                className="bg-gradient-to-r from-green-400 via-emerald-400 to-green-500 bg-clip-text text-transparent block relative transform hover:scale-105 transition-transform duration-700"
+                style={{
+                  background: 'linear-gradient(90deg, #4ade80 0%, #10b981 50%, #059669 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text'
+                }}
+              >
+                Procurement Mastery
+                <div className="absolute -top-6 -right-12 w-24 h-24 bg-gradient-to-br from-green-400/30 to-emerald-500/30 rounded-full blur-3xl animate-pulse"></div>
+              </span>
+            </span>
+            <span className="block text-3xl md:text-4xl lg:text-5xl font-black text-cyan-400 mt-4">
+              2-8 Week Delivery When Others Quote 6+ Months
+            </span>
+          </h1>
+
+          {/* Compelling Subheadline */}
+          <p className="text-xl md:text-2xl text-gray-300 mb-16 max-w-6xl mx-auto leading-relaxed font-light">
+            When H100 allocation shortages create enterprise AI initiative delays costing <span className="text-red-400 font-bold">$10M+ per quarter</span>,
+            <br className="hidden md:block" />
+            traditional flat-fee consultants charge upfront while delivering no results.
+            <br className="hidden md:block" />
+            Our <span className="text-green-400 font-semibold">commission-based model</span> provides alternative allocation access with <span className="text-emerald-400 font-bold">95% success rate</span> - payment only on delivery.
+          </p>
+
+          {/* Market Crisis Stats with Premium Cards */}
+          <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/20 rounded-3xl p-12 mb-16 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-red-400/20 to-orange-500/20 rounded-full blur-3xl"></div>
+            <div className="relative z-10">
+              <h3 className="text-3xl font-black text-white mb-8 text-center">Current H100 Market Crisis Impact</h3>
+              <div className="grid md:grid-cols-4 gap-8">
+                <div className="text-center group">
+                  <div className="text-4xl font-black text-red-400 mb-2 group-hover:scale-110 transition-transform duration-300">$40K-$50K</div>
+                  <div className="text-gray-300 font-semibold mb-1">Current Market Price</div>
+                  <div className="text-gray-400 text-sm">(vs $25K-$35K MSRP)</div>
                 </div>
-                <div>
-                  <div className="text-3xl font-bold text-yellow-400 mb-1">6-18</div>
-                  <div className="text-green-200 text-sm">Months Traditional Wait</div>
-                  <div className="text-green-300 text-xs">(vs 2-8 weeks Vommuli)</div>
+                <div className="text-center group">
+                  <div className="text-4xl font-black text-yellow-400 mb-2 group-hover:scale-110 transition-transform duration-300">6-18</div>
+                  <div className="text-gray-300 font-semibold mb-1">Months Traditional Wait</div>
+                  <div className="text-gray-400 text-sm">(vs 2-8 weeks Vommuli)</div>
                 </div>
-                <div>
-                  <div className="text-3xl font-bold text-purple-400 mb-1">78%</div>
-                  <div className="text-green-200 text-sm">Enterprises Behind Schedule</div>
-                  <div className="text-green-300 text-xs">(Due to H100 shortages)</div>
+                <div className="text-center group">
+                  <div className="text-4xl font-black text-purple-400 mb-2 group-hover:scale-110 transition-transform duration-300">78%</div>
+                  <div className="text-gray-300 font-semibold mb-1">Enterprises Behind Schedule</div>
+                  <div className="text-gray-400 text-sm">(Due to H100 shortages)</div>
                 </div>
-                <div>
-                  <div className="text-3xl font-bold text-orange-400 mb-1">$50M+</div>
-                  <div className="text-green-200 text-sm">Quarterly Revenue Risk</div>
-                  <div className="text-green-300 text-xs">(Per delayed AI initiative)</div>
+                <div className="text-center group">
+                  <div className="text-4xl font-black text-orange-400 mb-2 group-hover:scale-110 transition-transform duration-300">$50M+</div>
+                  <div className="text-gray-300 font-semibold mb-1">Quarterly Revenue Risk</div>
+                  <div className="text-gray-400 text-sm">(Per delayed AI initiative)</div>
                 </div>
               </div>
             </div>
+          </div>
+
+          {/* CTA Buttons with Ultra-Premium Styling */}
+          <div className="flex flex-col sm:flex-row gap-8 justify-center mb-16">
+            <Link href="/contact" className="group relative transform hover:scale-110 transition-all duration-500">
+              <div className="absolute -inset-2 bg-gradient-to-r from-red-400 via-red-500 to-red-600 rounded-3xl blur-lg opacity-60 group-hover:opacity-100 group-hover:blur-xl transition-all duration-500"></div>
+              <div 
+                className="relative bg-gradient-to-r from-red-500 to-red-600 px-12 py-6 rounded-3xl font-black text-xl text-white shadow-2xl"
+                style={{
+                  background: 'linear-gradient(135deg, #ef4444 0%, #dc2626 50%, #b91c1c 100%)',
+                  boxShadow: '0 20px 40px rgba(239, 68, 68, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.1) inset'
+                }}
+              >
+                <span className="relative z-10 flex items-center gap-3">
+                  🚨 Emergency H100 Allocation Check
+                  <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+                </span>
+                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-white/20 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </div>
+            </Link>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <Link href="/contact" className="bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors">
-                🚨 Emergency H100 Allocation Check
-              </Link>
-              <Link href="/tools/commission-calculator" className="border-2 border-green-300 text-green-300 hover:bg-green-300 hover:text-green-900 font-bold py-4 px-8 rounded-lg text-lg transition-colors">
-                💰 Calculate H100 Commission Savings
-              </Link>
+            <Link href="/tools/commission-calculator" className="group relative transform hover:scale-110 transition-all duration-500">
+              <div className="absolute -inset-1 bg-gradient-to-r from-green-500/50 to-emerald-500/50 rounded-3xl blur opacity-0 group-hover:opacity-100 group-hover:blur-lg transition-all duration-500"></div>
+              <div 
+                className="relative px-12 py-6 border-2 border-green-500/60 bg-gradient-to-br from-green-500/10 to-emerald-500/10 backdrop-blur-xl text-green-300 font-black text-xl rounded-3xl"
+                style={{
+                  backdropFilter: 'blur(20px)',
+                  border: '2px solid rgba(16, 185, 129, 0.3)',
+                  background: 'linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(5, 150, 105, 0.1) 100%)'
+                }}
+              >
+                <span className="relative z-10 flex items-center gap-3 group-hover:text-green-200 transition-colors duration-300">
+                  💰 Calculate H100 Commission Savings
+                  <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </span>
+                <div className="absolute inset-0 bg-gradient-to-r from-green-400/20 to-emerald-400/20 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </div>
+            </Link>
+          </div>
+
+          {/* Authority Proof Points with Premium Cards */}
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="group relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-2xl border border-white/20 rounded-3xl p-8 hover:bg-white/15 transform hover:scale-105 hover:-translate-y-2 transition-all duration-500 overflow-hidden">
+              <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-green-400/30 to-emerald-500/30 rounded-full blur-2xl group-hover:w-32 group-hover:h-32 transition-all duration-500"></div>
+              <div className="relative z-10 text-center">
+                <div className="text-4xl font-black text-white mb-2 group-hover:text-green-300 transition-colors duration-300">240+ H100s</div>
+                <div className="text-gray-300 font-semibold group-hover:text-white transition-colors duration-300">Largest single delivery (18 days)</div>
+              </div>
             </div>
             
-            {/* H100 Authority Proof Points */}
-            <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-              <div className="bg-green-600/80 p-4 rounded-lg">
-                <div className="text-2xl font-bold text-white mb-1">240+ H100s</div>
-                <div className="text-green-200 text-sm">Largest single delivery (18 days)</div>
+            <div className="group relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-2xl border border-white/20 rounded-3xl p-8 hover:bg-white/15 transform hover:scale-105 hover:-translate-y-2 transition-all duration-500 overflow-hidden">
+              <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-blue-400/30 to-cyan-500/30 rounded-full blur-2xl group-hover:w-32 group-hover:h-32 transition-all duration-500"></div>
+              <div className="relative z-10 text-center">
+                <div className="text-4xl font-black text-white mb-2 group-hover:text-blue-300 transition-colors duration-300">95%</div>
+                <div className="text-gray-300 font-semibold group-hover:text-white transition-colors duration-300">H100 allocation success rate</div>
               </div>
-              <div className="bg-blue-600/80 p-4 rounded-lg">
-                <div className="text-2xl font-bold text-white mb-1">95%</div>
-                <div className="text-blue-200 text-sm">H100 allocation success rate</div>
-              </div>
-              <div className="bg-purple-600/80 p-4 rounded-lg">
-                <div className="text-2xl font-bold text-white mb-1">$12.5K+</div>
-                <div className="text-purple-200 text-sm">Average savings per H100 vs traditional</div>
+            </div>
+            
+            <div className="group relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-2xl border border-white/20 rounded-3xl p-8 hover:bg-white/15 transform hover:scale-105 hover:-translate-y-2 transition-all duration-500 overflow-hidden">
+              <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-purple-400/30 to-pink-500/30 rounded-full blur-2xl group-hover:w-32 group-hover:h-32 transition-all duration-500"></div>
+              <div className="relative z-10 text-center">
+                <div className="text-4xl font-black text-white mb-2 group-hover:text-purple-300 transition-colors duration-300">$12.5K+</div>
+                <div className="text-gray-300 font-semibold group-hover:text-white transition-colors duration-300">Average savings per H100 vs traditional</div>
               </div>
             </div>
           </div>
         </div>
-      </header>
+      </section>
 
       {/* H100 Deep Technical Analysis & Enterprise AI Infrastructure Authority */}
       <section className="py-20">
